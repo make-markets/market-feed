@@ -32,3 +32,7 @@ curve_dao.egg-info/
 dist/
 
 .env
+
+config.yaml
+
+token_news/
