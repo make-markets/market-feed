@@ -16,6 +16,7 @@ pre-commit = "^4.0.1"
 requests = "^2.32.3"
 bs4 = "^0.0.2"
 google-search-results = "^2.4.2"
+python-dateutil = "^2.9.0.post0"
 
 [tool.poetry.dev-dependencies]
 
