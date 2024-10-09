@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "market-feed"
+version = "0.1.0"
+description = "A tool to analyze market news and summarize key points"
+authors = ["Your Name <your.email@example.com>"]
+packages = [
+    { include = "market_feed" },
+]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11.9"
+python-dotenv = "^1.0.1"
+serpapi = "^0.1.5"
+pre-commit = "^4.0.1"
+requests = "^2.32.3"
+bs4 = "^0.0.2"
+google-search-results = "^2.4.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+market-feed = "market_feed.__main__:main"
