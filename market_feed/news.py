@@ -1,11 +1,12 @@
 import os
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List
 
 from dotenv import load_dotenv
 from serpapi import GoogleSearch
 
-from market_feed.utils.date_utils import fetch_publication_date, parse_relative_date
+from market_feed.utils.date_utils import parse_relative_date
 from market_feed.utils.json_utils import load_from_json, save_to_json
 from market_feed.utils.logger import get_logger
 
@@ -46,21 +47,16 @@ def fetch_news(query: str, start_date: datetime, end_date: datetime) -> List[Dic
             raise Exception(f"API Error: {results['error']}")
 
         # Extract and format the news articles
-        news_articles = []
-        for result in results.get("news_results", []):
-            url = result.get("link")
-            timestamp_bs4 = fetch_publication_date(url)
-            posted_relative_date = parse_relative_date(result.get("date", ""))
-
-            article = {
+        news_articles = [
+            {
                 "title": result.get("title"),
                 "link": result.get("link"),
                 "snippet": result.get("snippet"),
                 "source": result.get("source"),
-                "timestamp_bs4": timestamp_bs4,
-                "timestamp_relative": posted_relative_date,
+                "timestamp": parse_relative_date(result.get("date", "")),
             }
-            news_articles.append(article)
+            for result in results.get("news_results", [])
+        ]
 
         all_news_articles.extend(news_articles)
 
@@ -77,47 +73,60 @@ def fetch_news(query: str, start_date: datetime, end_date: datetime) -> List[Dic
     return all_news_articles
 
 
+def remove_redundant_articles(
+    existing_articles: List[Dict], new_articles: List[Dict]
+) -> List[Dict]:
+    unique_articles = []
+    seen_articles = set()
+
+    for article in existing_articles + new_articles:
+        article_key = (article["source"], article["link"], article["title"])
+        if article_key not in seen_articles:
+            unique_articles.append(article)
+            seen_articles.add(article_key)
+
+    unique_articles.sort(key=lambda x: x["timestamp"], reverse=True)
+    return unique_articles
+
+
 def get_output_file(token: Dict, output_dir: str) -> str:
     """Generate the output file path for a given token."""
     filename = f"{token['symbol'].lower()}_news.json"
     return os.path.join(output_dir, filename)
 
 
-def fetch_and_update_news(token: Dict, output_dir: str):
+def fetch_and_update_news(token: Dict, config: Dict):
     logger.info(f"Fetching and updating news for {token['name']} ({token['symbol']})")
+    output_dir = config.get("output_dir", "token_news")
     output_file = get_output_file(token, output_dir)
-    all_news = load_from_json(output_file) or []
+    existing_news = load_from_json(output_file) or []
 
-    # Determine the start date for fetching news
-    if all_news:
-        # Get the most recent article's timestamp
+    if existing_news:
         most_recent_timestamp = max(
-            max(
-                int(article.get("timestamp_bs4") or 0),
-                int(article.get("timestamp_relative") or 0),
-            )
-            for article in all_news
+            int(article.get("timestamp") or 0) for article in existing_news
         )
         start_date = datetime.fromtimestamp(most_recent_timestamp, tz=timezone.utc)
     else:
-        # If no existing articles, use the lookback_years from config
         lookback_years = token.get("lookback_years", 2)
         start_date = datetime.now(timezone.utc) - timedelta(days=365 * lookback_years)
 
     end_date = datetime.now(timezone.utc)
 
-    # Construct the search query
     query = f"{token['name']} {token['symbol']}"
     if additional_phrases := token.get("additional_phrases", []):
         query += " " + " ".join(additional_phrases)
 
-    news_articles = fetch_news(query, start_date, end_date)
+    new_articles = fetch_news(query, start_date, end_date)
 
-    # Add only new articles
-    new_articles = [article for article in news_articles if article not in all_news]
-    all_news.extend(new_articles)
+    updated_articles = remove_redundant_articles(existing_news, new_articles)
 
-    save_to_json(all_news, output_file)
+    save_to_json(updated_articles, output_file)
+
+    new_articles_count = len(updated_articles) - len(existing_news)
     logger.info(
-        f"Fetched {len(new_articles)} new articles for {token['name']}. Total articles: {len(all_news)}"
+        f"Added {new_articles_count} new unique articles for {token['name']}. Total articles: {len(updated_articles)}"
     )
+
+    # Log headlines of new articles
+    for article in updated_articles[:new_articles_count]:
+        logger.info(f"New article for {token['name']}: {article['title']}")

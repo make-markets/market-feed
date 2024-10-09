@@ -1,17 +1,24 @@
 import json
-from typing import Dict, List
+import os
+from typing import Any, List
 
 
-def save_to_json(data: List[Dict], filename: str) -> None:
+def load_from_json(file_path: str) -> List[Any]:
+    """Load a list of dictionaries from a JSON file."""
+    if os.path.exists(file_path):
+        with open(file_path, "r") as f:
+            return json.load(f)
+    return []
+
+
+def save_to_json(data: List[Any], file_path: str) -> None:
     """Save a list of dictionaries to a JSON file."""
-    with open(filename, "w") as f:
+    with open(file_path, "w") as f:
         json.dump(data, f, indent=2)
 
 
-def load_from_json(filename: str) -> List[Dict]:
-    """Load a list of dictionaries from a JSON file."""
-    try:
-        with open(filename, "r") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return None
+def append_to_json(item: Any, file_path: str) -> None:
+    """Append an item to a JSON file."""
+    existing_data = load_from_json(file_path)
+    existing_data.append(item)
+    save_to_json(existing_data, file_path)
