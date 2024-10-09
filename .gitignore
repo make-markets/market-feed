@@ -30,3 +30,5 @@ curve_dao.egg-info/
 *.swo
 
 dist/
+
+.env
