@@ -53,16 +53,20 @@ def fetch_news(query: str, start_date: datetime, end_date: datetime) -> List[Dic
                 raise Exception(f"API Error: {results['error']}")
 
         # Extract and format the news articles
-        news_articles = [
-            {
-                "title": result.get("title"),
-                "link": result.get("link"),
-                "snippet": result.get("snippet"),
-                "source": result.get("source"),
-                "timestamp": parse_relative_date(result.get("date", "")),
-            }
-            for result in results.get("news_results", [])
-        ]
+        news_articles = []
+        for result in results.get("news_results", []):
+            timestamp = parse_relative_date(result.get("date", ""))
+            utc_time = datetime.fromtimestamp(timestamp, tz=timezone.utc)
+            news_articles.append(
+                {
+                    "title": result.get("title"),
+                    "link": result.get("link"),
+                    "snippet": result.get("snippet"),
+                    "source": result.get("source"),
+                    "timestamp": timestamp,
+                    "utc_time": utc_time.strftime("%Y-%m-%d %H:%M:%S UTC"),
+                }
+            )
 
         all_news_articles.extend(news_articles)
 
