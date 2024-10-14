@@ -23,14 +23,9 @@ venv/
 
 # python packaging
 /build
-curve_dao.egg-info/
 
 # vim
 *.swp
 *.swo
-
 dist/
-
 .env
-
-token_news/

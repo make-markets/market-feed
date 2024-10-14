@@ -1,11 +1,13 @@
 default_fetch_interval: 3600
-output_directory: token_news
+default_relevance_threshold: 6.5
+output_dir: "token_news"
 tokens:
   - name: Liquid staked Ether 2.0
     symbol: stETH
     address:
       ethereum: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
     lookback_years: 2
+    relevance_threshold: 8.0
     mandatory_phrases:
       - lido
       - staked eth

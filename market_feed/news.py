@@ -2,7 +2,7 @@ import os
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from itertools import combinations
-from typing import Dict, List
+from typing import Any, Dict, List
 
 from dotenv import load_dotenv
 from serpapi import GoogleSearch
@@ -10,6 +10,7 @@ from serpapi import GoogleSearch
 from market_feed.utils.date_utils import parse_relative_date
 from market_feed.utils.json_utils import load_from_json, save_to_json
 from market_feed.utils.logger import get_logger
+from market_feed.utils.relevance_analyzer import analyze_articles
 
 logger = get_logger()
 
@@ -45,7 +46,11 @@ def fetch_news(query: str, start_date: datetime, end_date: datetime) -> List[Dic
 
         if "error" in results:
             logger.error(f"API Error: {results['error']}")
-            raise Exception(f"API Error: {results['error']}")
+            if results["error"] == "Google hasn't returned any results for this query.":
+                logger.info("No results found for this query. Returning empty list.")
+                return []
+            else:
+                raise Exception(f"API Error: {results['error']}")
 
         # Extract and format the news articles
         news_articles = [
@@ -124,6 +129,11 @@ def fetch_and_update_news(token: Dict, config: Dict):
     output_file = get_output_file(token, output_dir)
     existing_news = load_from_json(output_file) or []
 
+    # Get the relevance threshold from token config or use the default
+    relevance_threshold = token.get(
+        "relevance_threshold", config.get("default_relevance_threshold", 0.5)
+    )
+
     if existing_news:
         most_recent_timestamp = max(
             int(article.get("timestamp") or 0) for article in existing_news
@@ -145,13 +155,27 @@ def fetch_and_update_news(token: Dict, config: Dict):
 
     updated_articles = remove_redundant_articles(existing_news, all_new_articles)
 
-    save_to_json(updated_articles, output_file)
+    # Analyze article relevance
+    keywords = [token["name"], token["symbol"]] + token.get("mandatory_phrases", [])
+    additional_phrases = token.get("additional_phrases", [])
+    analyzed_articles = analyze_articles(updated_articles, keywords, additional_phrases)
 
-    new_articles_count = len(updated_articles) - len(existing_news)
+    # Filter articles based on relevance threshold
+    filtered_articles = [
+        article
+        for article in analyzed_articles
+        if article["relevance"] >= relevance_threshold
+    ]
+
+    save_to_json(filtered_articles, output_file)
+
+    new_articles_count = len(filtered_articles) - len(existing_news)
     logger.info(
-        f"Added {new_articles_count} new unique articles for {token['name']}. Total articles: {len(updated_articles)}"
+        f"Added {new_articles_count} new relevant articles for {token['name']}. Total articles: {len(filtered_articles)}"
     )
 
-    # Log headlines of new articles
-    for article in updated_articles[:new_articles_count]:
-        logger.info(f"New article for {token['name']}: {article['title']}")
+    # Log headlines and relevance scores of new articles
+    for article in filtered_articles[:new_articles_count]:
+        logger.info(
+            f"New article for {token['name']}: {article['title']} (Relevance: {article['relevance']})"
+        )

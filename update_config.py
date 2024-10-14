@@ -37,6 +37,7 @@ def load_existing_config() -> Dict[str, Any]:
         "tokens": [],
         "output_directory": "token_news",
         "default_fetch_interval": DEFAULT_FETCH_INTERVAL,
+        "default_relevance_threshold": 0.5,  # Add default relevance threshold
     }
 
     if os.path.exists(CONFIG_FILE):
@@ -90,6 +91,7 @@ def create_token_config(coin_info: Dict[str, Any]) -> Dict[str, Any]:
         "mandatory_phrases": [],
         "additional_phrases": ["defi"],
         "lookback_years": LOOKBACK_YEARS,
+        "relevance_threshold": None,  # Add relevance_threshold field, set to None by default
     }
 
 
