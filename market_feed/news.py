@@ -7,7 +7,7 @@ from typing import Any, Dict, List
 from dotenv import load_dotenv
 from serpapi import GoogleSearch
 
-from market_feed.rss_feed import fetch_and_analyze_rss_feeds
+from market_feed.rss_feed import fetch_rss_feeds
 from market_feed.utils.date_utils import parse_relative_date
 from market_feed.utils.json_utils import load_from_json, save_to_json
 from market_feed.utils.logger import get_logger
@@ -159,22 +159,31 @@ def fetch_and_update_news(token: Dict, config: Dict):
         all_new_articles.extend(new_articles)
 
     # Fetch RSS feed articles
-    rss_articles = fetch_and_analyze_rss_feeds(token, config)
+    rss_articles = fetch_rss_feeds(token, config)
     all_new_articles.extend(rss_articles)
 
     updated_articles = remove_redundant_articles(existing_news, all_new_articles)
 
-    # Analyze article relevance
+    # Analyze article relevance for non-RSS articles
     keywords = [token["name"], token["symbol"]] + token.get("mandatory_phrases", [])
     additional_phrases = token.get("additional_phrases", [])
-    analyzed_articles = analyze_articles(updated_articles, keywords, additional_phrases)
+    analyzed_articles = [
+        article
+        if "relevance" in article
+        else analyze_articles([article], keywords, additional_phrases)[0]
+        for article in updated_articles
+    ]
 
     # Filter articles based on relevance threshold
     filtered_articles = [
         article
         for article in analyzed_articles
-        if article["relevance"] >= relevance_threshold
+        if article.get("relevance", 0) >= relevance_threshold
     ]
+
+    # Remove relevance metric from the final JSON
+    for article in filtered_articles:
+        article.pop("relevance", None)
 
     save_to_json(filtered_articles, output_file)
 
@@ -183,8 +192,6 @@ def fetch_and_update_news(token: Dict, config: Dict):
         f"Added {new_articles_count} new relevant articles for {token['name']}. Total articles: {len(filtered_articles)}"
     )
 
-    # Log headlines and relevance scores of new articles
+    # Log headlines of new articles
     for article in filtered_articles[:new_articles_count]:
-        logger.info(
-            f"New article for {token['name']}: {article['title']} (Relevance: {article['relevance']})"
-        )
+        logger.info(f"New article for {token['name']}: {article['title']}")
