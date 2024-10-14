@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 from dotenv import load_dotenv
 from serpapi import GoogleSearch
 
+from market_feed.rss_feed import fetch_and_analyze_rss_feeds
 from market_feed.utils.date_utils import parse_relative_date
 from market_feed.utils.json_utils import load_from_json, save_to_json
 from market_feed.utils.logger import get_logger
@@ -156,6 +157,10 @@ def fetch_and_update_news(token: Dict, config: Dict):
         logger.info(f"Fetching news for query: {query}")
         new_articles = fetch_news(query, start_date, end_date)
         all_new_articles.extend(new_articles)
+
+    # Fetch RSS feed articles
+    rss_articles = fetch_and_analyze_rss_feeds(token, config)
+    all_new_articles.extend(rss_articles)
 
     updated_articles = remove_redundant_articles(existing_news, all_new_articles)
 

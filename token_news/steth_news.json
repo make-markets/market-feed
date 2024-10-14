@@ -1,12 +1,120 @@
 [
   {
+    "title": "Lido Institutional: Q3 2024 Review",
+    "link": "https://blog.lido.fi/lido-institutional-q3-2024-review/",
+    "snippet": "Q3 2024 has seen institutions announcing the independent integration of stETH, thus enabling their users\u2019 access to Lido\u2019s liquid staking middleware.",
+    "source": "Lido Finance",
+    "timestamp": 1728378757,
+    "utc_time": "2024-10-08 09:12:37 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Simple DVT: Obol Testnet #4 Results",
+    "link": "https://blog.lido.fi/simple-dvt-obol-testnet-4-results/",
+    "snippet": "<p>The most recent Lido x Obol <a href=\"https://operatorportal.lido.fi/modules/simple-dvt-module?ref=blog.lido.fi\"><u>Simple DVT</u></a> testnet has officially ended, with the aggregate validator set surpassing all of the minimum requirements to move forward to mainnet!</p><p>&#xa0;</p>\n<p>This was the 4th testnet where Node Operators operated validators utilizing the Lido protocol with Obol&#x2019;s DVT solution, following</p>",
+    "source": "Lido Finance",
+    "timestamp": 1728310249,
+    "utc_time": "2024-10-07 14:10:49 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Inside $25bn DeFi giant Lido\u2019s plan to win over the finance world",
+    "link": "https://www.dlnews.com/articles/defi/lido-fades-restaking-and-focuses-on-institutional-users/",
+    "snippet": "Lido already accounts for 70% of the Ether liquid staking market. But it wants more.",
+    "source": "DL News Feeds",
+    "timestamp": 1727864977,
+    "utc_time": "2024-10-02 10:29:37 UTC",
+    "relevance": 10.0
+  },
+  {
     "title": "Inside $25bn DeFi giant Lido\u2019s plan to win over the finance world",
     "link": "https://www.dlnews.com/articles/defi/lido-fades-restaking-and-focuses-on-institutional-users/",
     "snippet": "Lido already accounts for 70% of the Ether liquid staking market. But it \nwants more.",
     "source": "DL News",
-    "timestamp": 1727698346,
-    "utc_time": "2024-09-30 12:12:26 UTC",
+    "timestamp": 1727699078,
+    "utc_time": "2024-09-30 12:24:38 UTC",
     "relevance": 10.0
+  },
+  {
+    "title": "Bringing Liquid Staking to the Fireblocks Network",
+    "link": "https://blog.lido.fi/bringing-liquid-staking-to-the-fireblocks-network/",
+    "snippet": "Lido Institutional is thrilled to share that Fireblocks has integrated Lido, enabling their users to stake their ETH with Lido\u2019s liquid staking middleware for Ethereum.",
+    "source": "Lido Finance",
+    "timestamp": 1727098232,
+    "utc_time": "2024-09-23 13:30:32 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Lido on Mode Network",
+    "link": "https://blog.lido.fi/lido-on-mode-network/",
+    "snippet": "Lido's wstETH is now available on Mode - a DeFi focused L2 built for the Optimism Superchain.",
+    "source": "Lido Finance",
+    "timestamp": 1726147618,
+    "utc_time": "2024-09-12 13:26:58 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Introducing Drop: Liquid Staking Protocol for the Interchain",
+    "link": "https://blog.lido.fi/introducing-drop-liquid-staking-protocol-for-the-interchain/",
+    "snippet": "Introducing Drop - a liquid staking protocol designed for Interchain assets, backed by the Lido Alliance.",
+    "source": "Lido Finance",
+    "timestamp": 1726068068,
+    "utc_time": "2024-09-11 15:21:08 UTC",
+    "relevance": 8.67
+  },
+  {
+    "title": "Wintermute Enables Collateral Support of stETH",
+    "link": "https://blog.lido.fi/wintermute-enables-collateral-support-of-steth/",
+    "snippet": "Lido Institutional contributors are excited to share that stETH joins Wintermute\u2019s multi-currency collateral support for OTC trading.",
+    "source": "Lido Finance",
+    "timestamp": 1726044776,
+    "utc_time": "2024-09-11 08:52:56 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Lido On BNB Chain",
+    "link": "https://blog.lido.fi/lido-goes-to-bnbchain/",
+    "snippet": "Lido's staked ETH is now on BNB Chain! Bridge your wstETH to the BNB Chain ecosystem to access hundreds of new DeFi opportunities.",
+    "source": "Lido Finance",
+    "timestamp": 1723729772,
+    "utc_time": "2024-08-15 13:49:32 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Lido Community Staking Testnet: Overview",
+    "link": "https://blog.lido.fi/community-staking-testnet-overview/",
+    "snippet": "One month has passed since Lido's Community Staking Module (CSM) launched its testnet on Holesky. Here's an update!",
+    "source": "Lido Finance",
+    "timestamp": 1722522709,
+    "utc_time": "2024-08-01 14:31:49 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Deribit Launches Trading in Lido\u2019s stETH",
+    "link": "https://blog.lido.fi/deribit-launches-trading-in-lidos-steth/",
+    "snippet": "Deribit announces a partnership with Lido Institutional which will see Deribit enabling the launch of trading in Lido\u2019s stETH on their exchange.",
+    "source": "Lido Finance",
+    "timestamp": 1721140560,
+    "utc_time": "2024-07-16 14:36:00 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Lido Monthly Report: June 2024",
+    "link": "https://blog.lido.fi/lido-monthly-report-june-2024/",
+    "snippet": "<p>Welcome to the June edition of the Lido Monthly Report, a comprehensive source for insights into all of the latest developments.</p><!--kg-card-begin: markdown--><p>&#xa0;</p>\n<!--kg-card-end: markdown--><p>This report reviews another month of noteworthy metrics, new collaborations, and ongoing developments that highlight the overall performance and progress of Lido.</p><!--kg-card-begin: markdown--><p>&#xa0;</p>\n<!--kg-card-end: markdown--><p>For previous editions of the</p>",
+    "source": "Lido Finance",
+    "timestamp": 1719836940,
+    "utc_time": "2024-07-01 12:29:00 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Presenting the Community Staking Module Testnet",
+    "link": "https://blog.lido.fi/presenting-community-staking-testnet/",
+    "snippet": "The Lido Community Staking Module (CSM) testnet is live! Learn all you need to get started here.",
+    "source": "Lido Finance",
+    "timestamp": 1719834962,
+    "utc_time": "2024-07-01 11:56:02 UTC",
+    "relevance": 8.67
   },
   {
     "title": "Lido Introduces 'Restaking Vaults' in Collaboration with Symbiotic, Mellow Finance",
@@ -114,6 +222,24 @@
     "source": "Bybit Learn",
     "timestamp": 1676592000,
     "utc_time": "2023-02-17 00:00:00 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Lido Testnet Launch",
+    "link": "https://lidofinance.medium.com/lido-testnet-launch-d33a95b0dd5e?source=rss-139df851eff9------2",
+    "snippet": "<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/1*GX0SY8NbTjCUuSPzG3zCHw.png\" /></figure><p>Lido is a liquid Ethereum staking solution letting you earn staking rewards with no lock-ups or minimum deposits whilst contributing to the security of the Ethereum 2.0\u00a0chain.</p><p>We\u2019re thrilled to announce the launch of the Lido protocol testnet, which allows users to stake and convert testnet ETH to staked ETH(stETH). With this also comes the test launch of the Lido DAO governance tools for the Ethereum staking\u00a0service.</p><h3>Testnet Objectives</h3><p>The testnet launch sees the deployment of contracts\u200a\u2014\u200aon Goerli testnet\u200a\u2014\u200ato test Lido in dynamic conditions and gain operational experience for participants. An added bonus is that the testnet will demonstrate the simplicity of staking Ethereum with\u00a0Lido.</p><p>Objectives with respect to Lido over the coming weeks are\u00a0to:</p><ul><li>Perform distributed key generation ceremony for withdrawal credentials, which will hold all Lido\u2019s staked\u00a0ether;</li><li>Deploy the Lido DAO, distribute governance tokens, and set up all necessary parameters via DAO members voting procedures;</li><li>Assign and launch oracles, which are responsible for reporting cumulative Lido balances on the Ethereum 2.0 beacon chain to the smart contract;</li><li>Assign node operators to whom staking on the Ethereum 2.0 beacon chain will be delegated; and</li><li>Start accepting ether deposits in Goerli and check Lido\u2019s operations.</li></ul><p>In addition to showcasing what has been developed, this testnet launch is an opportunity for Ethereum validators to demonstrate their expertise. Lido stakes through a set of proven validators and, in order to guarantee performance, the validators are best-in-industry.</p><h3>Testnet Roadmap</h3><p>The roadmap for the coming week is as\u00a0follows:</p><h3>Wednesday | Nov\u00a025</h3><ul><li>The first Lido signature generation ceremony is conducted.</li><li>The final testnet version of the protocol is deployed.</li><li>The <a href=\"https://docs.google.com/document/d/1S0cLkS8r3YihZ3vTBsHYFqyIkOT-y-SKhxRIFAsb87E/edit?usp=sharing\">DAO Token Holder Manual</a> is published.</li><li>DAO holders vote for initial protocol parameters and for the inclusion of Node Operators and\u00a0Oracles.</li></ul><p>At this point, the protocol is ready to accept user funds. There will be a quick run for working validators to earn revenue as early as possible, given the clog in Pyrmont validator entry\u00a0queue.</p><ul><li>A Node Operator with 10 signing keys will be added and accepted by the DAO with the testnets orchestrators (combined, testnet orchestrators votes will reach the quorum to ensure the test run will run to completion).</li><li>The testnet orchestrators will perform DAO voting for setting the withdrawal credentials chosen during the ceremony.</li><li>Testnet orchestrators will submit 320 ETH and use the protocol to deposit them using the keys submitted in the first\u00a0step.</li><li>One node operator is needed to assist with running that first validator node\u200a\u2014\u200aplease let us know if you\u2019re willing to\u00a0help.</li></ul><h3>Thursday | Nov\u00a026</h3><ul><li>The second, text-based, signature generation ceremony is started. This ceremony will last until Tuesday, Dec 1. It won\u2019t be used in the testnet, just generated.</li><li>Node Operator and Oracle manuals are published.</li><li>Oracle Committee Members deploy oracle daemons (at least 5 Oracle Committee Members).</li><li>Node Operators generate and submit signing keys (100 keys each, at least 6 operators).</li><li>Node Operators deploy validator clients for the submitted keys.</li></ul><h3>Friday | Nov\u00a027</h3><ul><li>DAO token holders vote for accepting the signing keys submitted by Node Operators.</li><li>DAO token holders initiate depositing the received and buffered user funds to the Beacon\u00a0chain.</li></ul><h3>Saturday | Nov\u00a028</h3><ul><li>Monitoring the system working as intended and performing more deposits.</li></ul><h3>Monday | Nov\u00a030</h3><ul><li>Testing integration with Uniswap\u00a0v1.</li></ul><p>If you have question, please send message @lidofi on\u00a0telegram</p><img alt=\"\" height=\"1\" src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=d33a95b0dd5e\" width=\"1\" />",
+    "source": "Stories by Lido Finance on Medium",
+    "timestamp": 1606524075,
+    "utc_time": "2020-11-28 00:41:15 UTC",
+    "relevance": 10.0
+  },
+  {
+    "title": "Introducing Lido",
+    "link": "https://lidofinance.medium.com/introducing-lido-8aee079cae8e?source=rss-139df851eff9------2",
+    "snippet": "<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/700/1*dYaMl99kR7dJ3UiBfUOfGQ.png\" /></figure><p>In the next few weeks, Ethereum is expected to launch ETH 2.0 and begin the transition to proof of stake (PoS) as discussed in the original Ethereum whitepaper.</p><p>PoS networks are not new. Although Tezos and Cosmos are amongst the 100s of networks that are secured by PoS today, when Ethereum\u2019s transition is complete, it will be the largest PoS network by a significant margin.</p><p>Ethereum\u2019s PoS launch raises some additional interesting issues:</p><ol><li>Early stakers will lock their ETH until transactions are enabled on ETH 2.0, which could be a few months or several\u00a0years.</li><li>ETH cannot be moved/traded or used as collateral when a user is staking ETH\u200a\u2014\u200ain other words, staked ETH is illiquid.</li><li>Users can only stake multiples of 32\u00a0ETH.</li></ol><p><strong>Early staking commitment</strong></p><p>When ETH 2.0 launches it will be a multi-phase rollout. Staking will launch quite early (in fact, the deposit contract is already live), but the state transitions\u200a\u2014\u200aincluding transfers\u200a\u2014\u200awill not be launched until Phase 2 of the ETH 2.0 transition. Without transactions enabled, it will be impossible to move, trade or spend ETH that has been\u00a0staked.</p><p>Practically, this means that any ETH staked on ETH 2.0 early in the rollout will be locked and unmoveable for a period of time\u200a\u2014\u200apossibly even up to 2 or 3\u00a0years.</p><p>This may deter participation in staking on ETH 2.0 given that users sacrifice the ability to use, sell, trade or do anything else with their ETH for that period of\u00a0time.</p><p><strong>Illiquidity</strong></p><p>During the period mentioned above, staked ETH will be non-transferable and illiquid.</p><p>Even after transactions are enabled on ETH 2.0 and it becomes possible to unstake ETH, ETH that is staked will remain illiquid for the period of time it is\u00a0staked.</p><p>This presents an interesting dilemma\u200a\u2014\u200aadversarial incentives between securing the network through staking and participating in DeFi are introduced. Users will have to choose between the rewards offered from staking or the yield offered from DeFi protocols.</p><p>This has been best described by Tarun from Gauntlet in his research on <a href=\"https://assets.pubpub.org/uegr5e8g/61581338612941.pdf\">competitive equilibria between staking and on-chain lending</a> and Haseeb from Dragonfly in <a href=\"https://medium.com/dragonfly-research/how-defi-cannibalizes-pos-security-84b146f00697\">his commentary on the\u00a0paper</a>.</p><p><strong>Staking 32 ETH multiples</strong></p><p>Finally, some users may face an additional issue with the requirement to stake multiples of 32\u00a0ETH.</p><p>At the time of this post, a user would need to stake no less than $11,744.32 in order to participate in securing the Ethereum network under ETH\u00a02.0.</p><p>People that own 5 ETH and want to participate in staking will not be able to do so alone. Equally, people who own 45 ETH will only be able to stake 32 ETH from their\u00a0holding.</p><h3>So\u2026 why\u00a0Lido?</h3><figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*ssjiQwdiwKFDebs4\" /></figure><p>Lido is a staking solution for ETH 2.0 built to solve these problems and backed by several industry-leading staking providers. It makes staked ETH liquid and allows participation with any amount of\u00a0ETH.</p><p>When using Lido to stake your ETH on the Ethereum beacon chain, users will receive a token (bETH), which represents their ETH on the Ethereum beacon chain on a 1:1 basis. It effectively acts as a bridge bringing ETH 2.0\u2019s staking rewards to ETH\u00a01.0.</p><p>As a user\u2019s staked ETH generates staking rewards from ETH 2.0, the user\u2019s ETH balance on the beacon chain will increase. bETH balances will update correspondingly once per day allowing you to access on ETH 1.0 the value of your staking rewards received on ETH\u00a02.0.</p><p>Users can use bETH in all of the same ways that they can use ETH: sell it, spend it and, since it is compatible to be used in DeFi, use it as collateral for on-chain lending. When transactions are enabled on ETH 2.0, users can also redeem bETH for\u00a0ETH.</p><p>We believe that bETH will be an important base primitive in DeFi, and a foundational building block for the Ethereum money-lego stack.</p><figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*Wf6HuUNyweqijxC0\" /></figure><p>Lido is intended to remove the adversarial incentives of ETH 2.0 by allowing users to stake their ETH while simultaneously participating in on-chain lending with bETH, thus providing them access to additional yield from other protocols and producing a more secure ETH\u00a0network.</p><h3>What happens\u00a0next?</h3><p>It sounds simple, but there is additional nuance. Over the next few weeks p2p.org CTO will share further blog posts about Lido\u2019s architecture and provide clarity for launch timelines; the code will become open sourced; and the testnet product will become accessible.</p><p>Meanwhile, if you\u2019d like to help build Lido, you can telegram <a href=\"https://t.me/lidofi\">@lidofi</a> and we\u2019ll be in\u00a0touch.</p><p>Presale &amp; Airdrop form\u00a0: <a href=\"https://forms.gle/usf622C3BXZpxyGd9\">https://forms.gle/usf622C3BXZpxyGd9</a><br />Announcement Channel\u00a0: <a href=\"https://t.me/LidoFinanceOfficial\">https://t.me/LidoFinanceOfficial</a></p><p>Until next\u00a0time.</p><p>Lido Finance\u00a0Team</p><img alt=\"\" height=\"1\" src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=8aee079cae8e\" width=\"1\" />",
+    "source": "Stories by Lido Finance on Medium",
+    "timestamp": 1602776290,
+    "utc_time": "2020-10-15 15:38:10 UTC",
     "relevance": 10.0
   }
 ]

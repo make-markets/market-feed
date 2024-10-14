@@ -1,6 +1,11 @@
 default_fetch_interval: 3600
 default_relevance_threshold: 6.5
 output_dir: "token_news"
+default_rss_feeds:
+  - https://cointelegraph.com/rss
+  - https://www.coindesk.com/arc/outboundfeeds/rss/
+  - https://decrypt.co/feed
+  - https://www.dlnews.com/arc/outboundfeeds/rss/
 tokens:
   - name: Liquid staked Ether 2.0
     symbol: stETH
@@ -15,3 +20,6 @@ tokens:
       - defi
       - p2p.org
       - lido.fi
+    rss_feeds:
+      - https://blog.lido.fi/rss/
+      - https://medium.com/feed/@lidofinance
