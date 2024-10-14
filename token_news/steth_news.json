@@ -1,11 +1,59 @@
 [
   {
+    "title": "LEGO Proposal: Research and Framework Development for LDO Tokenholder Value and Rights Maximization",
+    "link": "https://research.lido.fi/t/lego-proposal-research-and-framework-development-for-ldo-tokenholder-value-and-rights-maximization/8639",
+    "snippet": "Proposal: Research and Framework Development for LDO Tokenholder Value and Rights Maximization\nOverview:\nI propose a comprehensive project aimed at addressing LDO tokenholder value and rights within Lido DAO by developing a research-backed framework on value maximization mechanisms and governance alignment. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728740164,
+    "utc_time": "2024-10-12 13:36:04 UTC"
+  },
+  {
+    "title": "[Updated LEGO Proposal] Economic Viability of Preconfirmations",
+    "link": "https://research.lido.fi/t/updated-lego-proposal-economic-viability-of-preconfirmations/8631",
+    "snippet": "TL;DR\nThis proposal is to fund Nethermind to deliver a comprehensive analysis on the economic viability of (based) preconfirmations. This topic emerged as high priority from extended conversations between Nethermind, Lido and Chainbound.\nPreconfirmations have emerged as an add-on to block-proposing. It is imperative that preconfirmations are properly understood before they see mass adoption. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728633672,
+    "utc_time": "2024-10-11 08:01:12 UTC"
+  },
+  {
     "title": "Case Study: Comparing Liquid Staking Tokens, Native Token vs Fiat as Collateral Alternatives when Selling Call Options",
     "link": "https://blog.lido.fi/case-comparing-collateral-alternatives/",
     "snippet": "This case study compares 3 different collateral types when selling ETH call options: Fiat, ETH (native token), and stETH (liquid staking token).",
     "source": "Lido Finance",
     "timestamp": 1728568931,
     "utc_time": "2024-10-10 14:02:11 UTC"
+  },
+  {
+    "title": "Integrate CSM into the Decentralized Validator Vault",
+    "link": "https://research.lido.fi/t/integrate-csm-into-the-decentralized-validator-vault/8621",
+    "snippet": "The upcoming introduction of the Community Staking Module (CSM) presents an opportunity to expand the scope of Mellow\u2019s Decentralized Validator Vault (DVV), providing another opportunity to continue supporting the decentralization of the Lido on Ethereum protocol. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728550614,
+    "utc_time": "2024-10-10 08:56:54 UTC"
+  },
+  {
+    "title": "TMC-4: Increase Stonks execution limits",
+    "link": "https://research.lido.fi/t/tmc-4-increase-stonks-execution-limits/8616",
+    "snippet": "\n\n\n\nTMC-4: Increase Stonks execution limits\n\n\n\n\n\n\n\n\n\nStrategy\nIn order to achieve TMC-1, the TMC would need to reset DAO-enforced EasyTrack limits of 9k stETH and increase the threshold to 12k\n\n\nObjective\nSet thresholds and EasyTrack motions to seamlessly transform surplus stETH into stablecoins (DAI/USDC/USDT) to secure enough stablecoin working capital to support ongoing needs without overindexing on stables in the treasury\n\n\nIntended on-chain action\n1. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728457971,
+    "utc_time": "2024-10-09 07:12:51 UTC"
+  },
+  {
+    "title": "TMC-3: stSOL repatriation proposal",
+    "link": "https://research.lido.fi/t/tmc-3-stsol-repatriation-proposal/8615",
+    "snippet": "\n\n\n\nTMC-3: stSOL repatriation proposal\n\n\n\n\n\n\n\n\n\nStrategy\nComplete the sunsetting of Lido on Solana by repatriating the remaining 13k stSOL to Lido Aragon Agent on mainnet\n\n\nObjective\nRecover accumulated SOL by seeking best execution for a sale to USDC and transferring to Lido Aragon Agent with minimal counterparty risk\n\n\nIntended on-chain action\nDeploy a Solana Squads multisig to receive stSOL from the Solana Treasury Multisig. Unstake stSOL to SOL. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728457937,
+    "utc_time": "2024-10-09 07:12:17 UTC"
+  },
+  {
+    "title": "Staking Router + Community Staking Module upgrade announcement",
+    "link": "https://research.lido.fi/t/staking-router-community-staking-module-upgrade-announcement/8612",
+    "snippet": "Staking Router + Community Staking Module upgrade announcement\nThis post aims to highlight the technical details of the proposed upgrade to the DAO. If no strong objections are raised within two weeks, the specified parameters will be put forward in an on-chain vote for approval. Valset tech contributors are available to address any questions that may arise.\nThe protocol upgrade consists of three main components:\n\nLIP-23: Negative rebase sanity check with second opinion\nLIP-25. Staking Router 2. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728386997,
+    "utc_time": "2024-10-08 11:29:57 UTC"
   },
   {
     "title": "Lido Institutional: Q3 2024 Review",
@@ -16,12 +64,44 @@
     "utc_time": "2024-10-08 09:12:37 UTC"
   },
   {
+    "title": "Security Abundance Mindset",
+    "link": "https://research.lido.fi/t/security-abundance-mindset/8611",
+    "snippet": "What is Ethereum\u2019s monetary policy, what should it be, and why does it matter?\n\nAt Permissionless III in Salt Lake City (October 2024), Ansgar Dietrichs, Artem Kotelskiy and @mcnut will be discussing \u201cEthereum\u2019s Issuance Policy Endgame\u201d and exchange ideas about the right way to approach Ethereum\u2019s monetary policy.\nAlong with Artem and mcnut, @equanimiti and @adcv contributed to this debate through a proposal we call Maximum Viable Security, or MVS. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728375335,
+    "utc_time": "2024-10-08 08:15:35 UTC"
+  },
+  {
     "title": "Simple DVT: Obol Testnet #4 Results",
     "link": "https://blog.lido.fi/simple-dvt-obol-testnet-4-results/",
-    "snippet": "<p>The most recent Lido x Obol <a href=\"https://operatorportal.lido.fi/modules/simple-dvt-module?ref=blog.lido.fi\"><u>Simple DVT</u></a> testnet has officially ended, with the aggregate validator set surpassing all of the minimum requirements to move forward to mainnet!</p><p>&#xa0;</p>\n<p>This was the 4th testnet where Node Operators operated validators utilizing the Lido protocol with Obol&#x2019;s DVT solution, following</p>",
+    "snippet": "The most recent Lido x Obol Simple DVT testnet has officially ended, with the aggregate validator set surpassing all of the minimum requirements to move forward to mainnet!\u00a0\nThis was the 4th testnet where Node Operators operated validators utilizing the Lido protocol with Obol\u2019s DVT solution, following",
     "source": "Lido Finance",
     "timestamp": 1728310249,
     "utc_time": "2024-10-07 14:10:49 UTC"
+  },
+  {
+    "title": "CSM Testnet: Node Operator Analysis",
+    "link": "https://research.lido.fi/t/csm-testnet-node-operator-analysis/8604",
+    "snippet": "CSM Testnet: Node Operator Analysis\nIntroduction\nThe CSM Testnet performance evaluation concluded on September 30, 2024, shortly followed by the publication of the CSM Mainnet Early Adoption (EA) list. One pathway to EA list inclusion was through participation as a node operator in the testnet, maintaining both good performance and sufficient participation time.\n\nPerformance was measured as the percentage of successfully completed duties out of total assigned duties. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728290635,
+    "utc_time": "2024-10-07 08:43:55 UTC"
+  },
+  {
+    "title": "wstETH Deployment to Zircuit and Ownership Acceptance by Lido DAO",
+    "link": "https://research.lido.fi/t/wsteth-deployment-to-zircuit-and-ownership-acceptance-by-lido-dao/8602",
+    "snippet": "Introduction\nZircuit proposes the deployment of wstETH (Wrapped liquid staked Ether 2.0) onto Zircuit L2, with the ultimate goal of acceptance of ownership of the wstETH bridging components by the Lido DAO.\nAbout Zircuit\nZircuit is an Ethereum Virtual Machine (EVM)-compatible Zero-Knowledge Layer 2 rollup launching on the Ethereum network. Apart from offering much lower network fees and higher transaction throughput than Ethereum mainnet, Zircuit\u2019s main focus is security. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728267201,
+    "utc_time": "2024-10-07 02:13:21 UTC"
+  },
+  {
+    "title": "RMC Proposal - Remove deprecated Eden relay, Add Titan relays",
+    "link": "https://research.lido.fi/t/rmc-proposal-remove-deprecated-eden-relay-add-titan-relays/8591",
+    "snippet": "The Relay Maintenance Committee  reviewed the request from the Titan relay team  for inclusion in the \u201cmay use\u201d list.\nAfter an extensive vetting and review period, during which the Titan relay has gone from permissioned to permissionless for builders, and monitoring of relay performance, the RMC has reached consensus to suggest to modify the vetted relays list to include the two Titan relays (filtering and non-filtering) The assessment can be found here . ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1728112015,
+    "utc_time": "2024-10-05 07:06:55 UTC"
   },
   {
     "title": "CSM Early Adoption: Unique Opportunity for Ethereum Solo Stakers",
@@ -32,12 +112,108 @@
     "utc_time": "2024-10-04 15:10:13 UTC"
   },
   {
+    "title": "Modular Crypto Proposal for Lido DAO - Educational Content and Marketing in Brazil",
+    "link": "https://research.lido.fi/t/modular-crypto-proposal-for-lido-dao-educational-content-and-marketing-in-brazil/8582",
+    "snippet": "Dear Lido Community,\nWe prepared a grant proposal to create educational content and marketing in Brazil.\nOne-Liner:\nCreating an educational and awareness initiative through video workshop, research report, and weekly updates, focusing on Lido\u2019s technology, staking solutions, DeFi use cases, governance, Decentralized Validator Technology (DVT), and the Community Staking Module (CSM) for the Brazilian market. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727962224,
+    "utc_time": "2024-10-03 13:30:24 UTC"
+  },
+  {
+    "title": "ACI Delegate Thread",
+    "link": "https://research.lido.fi/t/aci-delegate-thread/8578",
+    "snippet": "Delegate Information\nName: ACI\nDelegate Address: 0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922\nForum: @ACI\nTwitter: AaveChan\nLanguages: English, French, Spanish\n\nIntroduction and Experience\nEstablished in early 2023, ACI stands as one of the driving forces within the Aave ecosystem. As the primary delegate of the Aave DAO, ACI is deeply committed to turning ideas into tangible results. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727941387,
+    "utc_time": "2024-10-03 07:43:07 UTC"
+  },
+  {
+    "title": "Aestus MEV Relay - Grant Request for Operational Expenses",
+    "link": "https://research.lido.fi/t/aestus-mev-relay-grant-request-for-operational-expenses/8576",
+    "snippet": "Preamble\nAestus is a non-censoring and independent MEV Relay based on the original implementation from Flashbots; one of a handful of entities providing the ability for validators to auction their rights to block production to builders. As of Nov 2024, we\u2019ll be celebrating two years of continuous operation.\nMEV is a valuable component of staking returns, and it is critical that we minimise centralisation pressures by ensuring profits are equitably distributed amongst all validators. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727909159,
+    "utc_time": "2024-10-02 22:45:59 UTC"
+  },
+  {
+    "title": "Grant to Help Support Vyper Development (2024-2025)",
+    "link": "https://research.lido.fi/t/grant-to-help-support-vyper-development-2024-2025/8568",
+    "snippet": "Background\nVyper is a pythonic smart contract programming language for the Ethereum Virtual Machine (EVM). It is currently the second most popular EVM programming language with over 30,000 contracts deployed across a dozen chains.\nLido is using Vyper contracts for different integrations & ops contracts and the Lido Vyper code at one point held more than 600k ETH worth of user funds. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727878033,
+    "utc_time": "2024-10-02 14:07:13 UTC"
+  },
+  {
+    "title": "Becoming an Ethereum Node Operator Part 2: Building a reputation",
+    "link": "https://research.lido.fi/t/becoming-an-ethereum-node-operator-part-2-building-a-reputation/8553",
+    "snippet": "Author: Javier Ron - Research @firstset \nWe began this series of posts by highlighting the potential dangers associated with node operators becoming excessively large and exacerbating centralization issues within Liquid Staking Protocols (LSPs). As we continue this series, we provide insights and strategies for smaller Node Operators (NOs) to grow and establish themselves in the network. At first glance, this might seem contradictory. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727701703,
+    "utc_time": "2024-09-30 13:08:23 UTC"
+  },
+  {
     "title": "Inside $25bn DeFi giant Lido\u2019s plan to win over the finance world",
     "link": "https://www.dlnews.com/articles/defi/lido-fades-restaking-and-focuses-on-institutional-users/",
     "snippet": "Lido already accounts for 70% of the Ether liquid staking market. But it \nwants more.",
     "source": "DL News",
-    "timestamp": 1727700807,
-    "utc_time": "2024-09-30 12:53:27 UTC"
+    "timestamp": 1727701637,
+    "utc_time": "2024-09-30 13:07:17 UTC"
+  },
+  {
+    "title": "[RFC] Adjusting Delegate Incentivization Program",
+    "link": "https://research.lido.fi/t/rfc-adjusting-delegate-incentivization-program/8533",
+    "snippet": "Introduction\nLido DAO\u2019s new delegate program, incentivizing select public delegates, is set to launch soon. It follows the first delegate rally, which is ending.\nWhile we acknowledge this has been great progress for Lido DAO, where around 12M LDO is being delegated to public delegates on-chain, we see a lot of room to improve to make Lido governance smooth and robust.\nHere, we outlined a proposal draft to improve this incentive program. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727463911,
+    "utc_time": "2024-09-27 19:05:11 UTC"
+  },
+  {
+    "title": "Council Daemons Funding",
+    "link": "https://research.lido.fi/t/council-daemons-funding/8526",
+    "snippet": "TL;DR\nThis proposal seeks funding for the off-chain infrastructure component of the Deposit Security Module (DSM), known as Council Daemons. With the upcoming Staking Router v2 update, Council Daemons will handle additional transactions related to keys unvetting. Additionally, a migration from the current RabbitMQ transport to a decentralized data bus based on smart contracts on EVM-compatible chains is proposed, which will introduce new transaction fee costs. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727339562,
+    "utc_time": "2024-09-26 08:32:42 UTC"
+  },
+  {
+    "title": "Increase the Proposal Threshold for Snapshot",
+    "link": "https://research.lido.fi/t/increase-the-proposal-threshold-for-snapshot/8512",
+    "snippet": "Tl;dr\nThis proposal seeks to increase the Snapshot proposal threshold to 5,000 ~ 15,000 LDO to prevent spam and encourage higher-quality submissions.\nIntroduction\nLido DAO uses Snapshot to gather initial community consensus and serves as the source of truth for proposals that do not require on-chain execution. Given the relatively low stakes of Snapshot proposals, the platform currently has a lower threshold for proposal submission than on-chain governance. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727271606,
+    "utc_time": "2024-09-25 13:40:06 UTC"
+  },
+  {
+    "title": "LEGO Proposal: Economic Viability and Securing of Preconfirmations",
+    "link": "https://research.lido.fi/t/lego-proposal-economic-viability-and-securing-of-preconfirmations/8504",
+    "snippet": "TL;DR\nThis proposal is to fund Nethermind to deliver comprehensive analyses of two high-priority topics relating to (based) preconfirmations. These topics emerged as high-priority from extended conversations between Nethermind, Lido and Chainbound. Those topics are:\n\nThe Economic Viability of Preconfirmations\nSecuring Preconfirmations\n\nIt is imperative that preconfirmations are properly understood before they see mass adoption. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727265469,
+    "utc_time": "2024-09-25 11:57:49 UTC"
+  },
+  {
+    "title": "RockLogic Monthly Notes - 09/2024",
+    "link": "https://research.lido.fi/t/rocklogic-monthly-notes-09-2024/8490",
+    "snippet": "Dear Lido Community,\nWelcome to our monthly news, where we provide you with updates on our efforts to establish a secure Ethereum environment. Here\u2019s a summary of notable developments since our last update.\nLido x SSV Mainnet Cohort 2\nJoined the Thoughtful Tiger cluster and completed all initial setup tasks according to the Lido Simple DVT Mainnet Guide. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727239733,
+    "utc_time": "2024-09-25 04:48:53 UTC"
+  },
+  {
+    "title": "stETH on Optimism upgrade announcement and action plan",
+    "link": "https://research.lido.fi/t/steth-on-optimism-upgrade-announcement-and-action-plan/8474",
+    "snippet": "stETH on Optimism upgrade announcement and action plan\nTL;DR\nLido stETH workstream contributors have developed a detailed action plan, built on the previously approved LIP-22 proposal. The objective is to upgrade the wstETH bridge smart contract endpoints, enabling the availability of rebasable stETH on the Optimism network alongside the already deployed wstETH as a part of the upcoming on-chain Aragon vote. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727210628,
+    "utc_time": "2024-09-24 20:43:48 UTC"
+  },
+  {
+    "title": "Becoming an Ethereum Node Operator Part 1: The Current Landscape of Liquid Staking Protocols",
+    "link": "https://research.lido.fi/t/becoming-an-ethereum-node-operator-part-1-the-current-landscape-of-liquid-staking-protocols/8447",
+    "snippet": "Author: Javier Ron - Research @firstset\nTLDR\n\nThe combination of capital and technical barrier of entry has pushed the solo staker category to represent between 1% and 6.5% of the total ETH staked, based on Dune Analytics and Rated estimates\nRated reports that almost 50% of all staked ETH is handled through the top 4 staking entities, which either run their own centralized validators, or delegate to a limited set of established Node Operators (NOs). ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1727098632,
+    "utc_time": "2024-09-23 13:37:12 UTC"
   },
   {
     "title": "Bringing Liquid Staking to the Fireblocks Network",
@@ -46,6 +222,38 @@
     "source": "Lido Finance",
     "timestamp": 1727098232,
     "utc_time": "2024-09-23 13:30:32 UTC"
+  },
+  {
+    "title": "Victim of phishing",
+    "link": "https://research.lido.fi/t/victim-of-phishing/8417",
+    "snippet": "Can you help me? I am of phishing of staked ether today by ledger. Can you help me?\n            2 posts - 2 participants\n            Read full topic",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1726816961,
+    "utc_time": "2024-09-20 07:22:41 UTC"
+  },
+  {
+    "title": "PERCH Proposal: Request for testing of Commit-Boost and the PBS Module",
+    "link": "https://research.lido.fi/t/perch-proposal-request-for-testing-of-commit-boost-and-the-pbs-module/8397",
+    "snippet": "Introduction\nBelow is a post in response to PERCH: Protocol Evaluation and Request Coordination Hub. Commit-Boost has previously been introduced to the Lido Community (recommended reading if you are not familiar) and we submitted a grant proposal for funding from the Lido Community. Thank you for this opportunity to engage with the Lido Community.\nOver the last few months, Commit-Boost has been in development. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1726669012,
+    "utc_time": "2024-09-18 14:16:52 UTC"
+  },
+  {
+    "title": "Unlocking new validator yield with mev-commit through stETH",
+    "link": "https://research.lido.fi/t/unlocking-new-validator-yield-with-mev-commit-through-steth/8380",
+    "snippet": "Hello! I\u2019m Drew Harding and I lead growth strategies for Primev, which is building mev-commit. Long time reader, first time poster  I\u2019m excited to formally introduce the project to the Lido community and hear your feedback!\nTL;DR\nPrimev introduces mev-commit, a novel network designed to play fast commitment games starting with preconfirmations, which have shown to enhance validator yield on the Holesky testnet. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1726250305,
+    "utc_time": "2024-09-13 17:58:25 UTC"
+  },
+  {
+    "title": "CSM Prover Bot Funding",
+    "link": "https://research.lido.fi/t/csm-prover-bot-funding/8378",
+    "snippet": "TL;DR\nOne of the essential parts of the upcoming Community Staking Module (CSM) is the permissionless reporting of the facts of the validator\u2019s withdrawal and slashing. To facilitate CSM operations and reduce the operational burden on the CSM Node Operators, Lido contributors developed a csm-prover-tool. This tool will run in the daemon mode to ensure timely reporting of the validator\u2019s withdrawal and slashing. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1726227646,
+    "utc_time": "2024-09-13 11:40:46 UTC"
   },
   {
     "title": "Lido on Mode Network",
@@ -72,12 +280,68 @@
     "utc_time": "2024-09-11 08:52:56 UTC"
   },
   {
+    "title": "Stakewithus is now part of Nansen",
+    "link": "https://research.lido.fi/t/stakewithus-is-now-part-of-nansen/8345",
+    "snippet": "Dear Lido Community,\nWe are excited to announce that as of 10/09/2024, Stakewithus is now part of Nansen.ai!\nThis acquisition aligns perfectly with our vision of providing seamless and secure staking services to a broader audience. Our staking expertise combined with Nansen\u2019s advanced analytics capabilities sets the stage for an integrated, powerful and one-stop investment platform. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1726023421,
+    "utc_time": "2024-09-11 02:57:01 UTC"
+  },
+  {
+    "title": "CSM Committee Creation",
+    "link": "https://research.lido.fi/t/csm-committee-creation/8333",
+    "snippet": "Purpose\nThe Community Staking Module is approaching the mainnet. Most of the CSM features are designed to function automatically and permissionlessly. While critical management functions like creating or updating bond curves, setting charge penalty recipient, and others are controlled by the on-chain voting to ensure protocol security and reliability, the committee multi-sig can control some less critical and non-essential features. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1725963321,
+    "utc_time": "2024-09-10 10:15:21 UTC"
+  },
+  {
+    "title": "Initiative to increase voting participation and delegation (Govcheck by PYOR)",
+    "link": "https://research.lido.fi/t/initiative-to-increase-voting-participation-and-delegation-govcheck-by-pyor/8331",
+    "snippet": "About PYOR\nPYOR (Power Your Own Research) is a cutting-edge blockchain analytics firm established in 2022. The company specializes in providing deep analytical insights and research on blockchain technologies, focusing on enhancing the understanding and strategic use of these technologies in various applications. PYOR is committed to empowering the blockchain ecosystem by delivering actionable intelligence to drive informed decision-making and strategic growth. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1725946909,
+    "utc_time": "2024-09-10 05:41:49 UTC"
+  },
+  {
+    "title": "[Proposal] PERCH: Protocol Evaluation and Request Coordination Hub",
+    "link": "https://research.lido.fi/t/proposal-perch-protocol-evaluation-and-request-coordination-hub/8306",
+    "snippet": "Overview\nThe proposal is addressed at projects/protocols that provide functions, i.e relays, credible commitments\u2026, and who are seeking operators running validators on Lido on Ethereum to test/utilize these functions.\nIt\u2019s also addressed at Node Operators (NOs), running validators on Lido on Ethereum, who wish to express their interest in participating in collaborative testing on test networks. ...",
+    "source": "Lido Governance - Latest topics",
+    "timestamp": 1725625526,
+    "utc_time": "2024-09-06 12:25:26 UTC"
+  },
+  {
+    "title": "Optimizing Lido On-chain Voting Timelines for Inclusive Governance",
+    "link": "https://research.lido.fi/t/optimizing-lido-on-chain-voting-timelines-for-inclusive-governance/8265",
+    "snippet": "Overview\nWe suggest optimizing Lido\u2019s on-chain voting durations to encourage broader governance participation. The existing 72-hour voting period\u2014split into a 48-hour main phase for Yes and No votes and a 24-hour objection phase for No only\u2014strains contributors. The current process can be found here. Lido DAO Governance\nWe propose to change it as below. ...",
+    "source": "",
+    "timestamp": 1725426649,
+    "utc_time": "2024-09-04 05:10:49 UTC"
+  },
+  {
     "title": "Delegation: Enhancing Governance",
     "link": "https://blog.lido.fi/delegation-enhancing-governance/",
     "snippet": "Following a Snapshot vote and an on-chain vote, Lido DAO will be introducing governance delegation and incentive programs to enhance governance participation and to streamline decision-making across the DAO.",
     "source": "Lido Finance",
     "timestamp": 1724694324,
     "utc_time": "2024-08-26 17:45:24 UTC"
+  },
+  {
+    "title": "Organize the Lido Alliance Program as a Lido-DAO-Adjacent BORG",
+    "link": "https://research.lido.fi/t/organize-the-lido-alliance-program-as-a-lido-dao-adjacent-borg/8173",
+    "snippet": "Preamble\nTitle: Organize the Lido Alliance Program as a Lido-DAO-Adjacent BORG\nAuthor(s): @lex_node / Gabriel Shapiro (for MetaLeX Pro LLP)\nSummary\n\n\nFollowing the approval of the Lido Alliance Proposal in May, Lido DAO contributors have worked with MetaLeX to propose the creation of a LIDO Alliance workstream, including through the incorporation of a Lido-DAO-adjacent cybernetic organization (BORG) to \u201clegally wrap\u201d the \u201cAlliance workgroup\u201d and the related assets and activities. ...",
+    "source": "",
+    "timestamp": 1724337132,
+    "utc_time": "2024-08-22 14:32:12 UTC"
+  },
+  {
+    "title": "Pol Lanski Delegate Thread",
+    "link": "https://research.lido.fi/t/pol-lanski-delegate-thread/8155",
+    "snippet": "Delegate information:\nName: Pol Lanski\nAddress: lanski.eth\nForum: @Lanski\nTwitter: Pol_Lanski\nLanguages: Contact me in English, Spanish, French, Catalan\nIntroduction\nI\u2019m the Project Lead at Dappnode and member of the builder collective dOrg.\nI\u2019ve been in blockchain since I mined dogecoin in 2014 and full time since 2019, working for the past 5 years on creating a decentralized infrastructure network of node runners via Dappnode. ...",
+    "source": "",
+    "timestamp": 1724077255,
+    "utc_time": "2024-08-19 14:20:55 UTC"
   },
   {
     "title": "Lido On BNB Chain",
@@ -96,12 +360,36 @@
     "utc_time": "2024-08-13 15:04:58 UTC"
   },
   {
+    "title": "Polar - Delegate Thread",
+    "link": "https://research.lido.fi/t/polar-delegate-thread/8048",
+    "snippet": "Introduction: Hi there, most of you probably know me as polar, though my real name is Paul Dylan-Ennis. I am an academic with a research specialism in Ethereum protocol governance. I have written a book, The Absolute Essentials of Ethereum and a number of academic articles on Ethereum and Bitcoin culture. I teach the first Ethereum-only module at University level, called The Ethereum Ecosystem. ...",
+    "source": "",
+    "timestamp": 1723537059,
+    "utc_time": "2024-08-13 08:17:39 UTC"
+  },
+  {
+    "title": "Community Grants: CSM Resources",
+    "link": "https://research.lido.fi/t/community-grants-csm-resources/7990",
+    "snippet": "Now that the Community Staking Module is finally on testnet, and with more than 200 node operators registered, the Community Lifeguards Initiative sub-committee is willing to consider allocating retroactive funding for community-driven resources that will increase awareness of the module and help home stakers in their journey to validate on CSM. ...",
+    "source": "",
+    "timestamp": 1722966771,
+    "utc_time": "2024-08-06 17:52:51 UTC"
+  },
+  {
     "title": "Lido Community Staking Testnet: Overview",
     "link": "https://blog.lido.fi/community-staking-testnet-overview/",
     "snippet": "One month has passed since Lido's Community Staking Module (CSM) launched its testnet on Holesky. Here's an update!",
     "source": "Lido Finance",
     "timestamp": 1722522709,
     "utc_time": "2024-08-01 14:31:49 UTC"
+  },
+  {
+    "title": "Establish a Public Delegate Platform and Delegate Incentivization Program",
+    "link": "https://research.lido.fi/t/establish-a-public-delegate-platform-and-delegate-incentivization-program/7858",
+    "snippet": "Proposed by:\nLido DAO Operation Workstream: @Jenya_K, @kadmil\nAgora Team: Charlie Feng (Twitter), Marcela Ochoa (Marcela Ochoa - Agora | LinkedIn)\nMotivation:\nThe goal of creating a public delegate platform and a framework to incentivize delegates\u2019 work is\n\nincrease active voting participation,\nimprove the quality of discussions and feedback,\nallow the community to unite and increase protocol safety by activating new tokenholders in governance via Delegation. ...",
+    "source": "",
+    "timestamp": 1721286577,
+    "utc_time": "2024-07-18 07:09:37 UTC"
   },
   {
     "title": "Deribit Launches Trading in Lido\u2019s stETH",
@@ -114,7 +402,7 @@
   {
     "title": "Lido Monthly Report: June 2024",
     "link": "https://blog.lido.fi/lido-monthly-report-june-2024/",
-    "snippet": "<p>Welcome to the June edition of the Lido Monthly Report, a comprehensive source for insights into all of the latest developments.</p><!--kg-card-begin: markdown--><p>&#xa0;</p>\n<!--kg-card-end: markdown--><p>This report reviews another month of noteworthy metrics, new collaborations, and ongoing developments that highlight the overall performance and progress of Lido.</p><!--kg-card-begin: markdown--><p>&#xa0;</p>\n<!--kg-card-end: markdown--><p>For previous editions of the</p>",
+    "snippet": "Welcome to the June edition of the Lido Monthly Report, a comprehensive source for insights into all of the latest developments.\u00a0\nThis report reviews another month of noteworthy metrics, new collaborations, and ongoing developments that highlight the overall performance and progress of Lido.\u00a0\nFor previous editions of the",
     "source": "Lido Finance",
     "timestamp": 1719836940,
     "utc_time": "2024-07-01 12:29:00 UTC"
@@ -126,6 +414,22 @@
     "source": "Lido Finance",
     "timestamp": 1719834962,
     "utc_time": "2024-07-01 11:56:02 UTC"
+  },
+  {
+    "title": "Tan\u00e9 - Lido community education in APAC",
+    "link": "https://research.lido.fi/t/tane-lido-community-education-in-apac/7716",
+    "snippet": "Dear Lido Community,\nWe prepared a grant proposal for community education in the Asia Pacific region to support these initiatives.\n\nSimple DVT\nCommunity Staking Module\nLido Community Lifeguards Initiative\n\nThis proposal has already been approved by the LEGO Council.\nWe highly appreciate any kind of comments, feedback and contributions.\nOverview\nEducation and empowerment for the community to drive decentralization. ...",
+    "source": "",
+    "timestamp": 1718677748,
+    "utc_time": "2024-06-18 02:29:08 UTC"
+  },
+  {
+    "title": "What is Lido: How Liquid Staking is Changing Ethereum",
+    "link": "https://coincentral.com/what-is-lido/",
+    "snippet": "Lido's liquid staking service allows stakers to earn staking rewards while \nstill keeping liquidity. It's a revolutionary concept.",
+    "source": "CoinCentral",
+    "timestamp": 1718323200,
+    "utc_time": "2024-06-14 00:00:00 UTC"
   },
   {
     "title": "Lido Introduces 'Restaking Vaults' in Collaboration with Symbiotic, Mellow Finance",
@@ -142,6 +446,14 @@
     "source": "DL News",
     "timestamp": 1713830400,
     "utc_time": "2024-04-23 00:00:00 UTC"
+  },
+  {
+    "title": "LIP-22: stETH on L2",
+    "link": "https://research.lido.fi/t/lip-22-steth-on-l2/6855",
+    "snippet": "TL;DR\nPropose an architecture framework for the rebasable stETH token on L2 to be used across various Ethereum Layer 2 (L2) networks. The idea is to create a canonical version of stETH on these networks, being wrapped on top of wstETH (sort of \u2018wrapped twice\u2019). This approach will streamline the process of moving stETH across Ethereum rollups, making use of the existing wstETH infrastructure and liquidity venues on L2 networks. ...",
+    "source": "",
+    "timestamp": 1710335780,
+    "utc_time": "2024-03-13 13:16:20 UTC"
   },
   {
     "title": "Lido\u2019s stETH leapfrogs XRP market value amid Ether staking frenzy",
@@ -184,12 +496,44 @@
     "utc_time": "2023-12-22 00:00:00 UTC"
   },
   {
+    "title": "Community Staking Module",
+    "link": "https://research.lido.fi/t/community-staking-module/5917",
+    "snippet": "Lido DAO\u2019s mission is to make Ethereum staking simple, secure, and decentralized. Lido on Ethereum launched with a curated validator set, which has enabled the protocol to grow to its current size robustly but leaves some room for improvement from the perspective of allowing a bigger range of independent node operators to more easily interact with the protocol. Recent long-range goals approved by the Lido DAO (proposed by @Hasu) suggest the introduction of a permissionless staking module. ...",
+    "source": "",
+    "timestamp": 1699529624,
+    "utc_time": "2023-11-09 11:33:44 UTC"
+  },
+  {
     "title": "stETH Philippines Guide | Lido Staked Ether Usecases",
     "link": "https://bitpinas.com/learn-how-to-guides/steth-ph-lido-staked-ether/",
     "snippet": "stETH is a liquid token. This means that it can be used for DeFi \napplications, like crypto lending. It is also an ERC-20 token and follows \nthe ETH 2.0 Beacon...",
     "source": "BitPinas",
     "timestamp": 1697500800,
     "utc_time": "2023-10-17 00:00:00 UTC"
+  },
+  {
+    "title": "Staking Router Module Proposal: Simple DVT",
+    "link": "https://research.lido.fi/t/staking-router-module-proposal-simple-dvt/5625",
+    "snippet": "Staking Router Module Proposal: Simple DVT\n\nEDIT Feb 12, 2024\nThe Simple DVT Module Committee multisig has been created and all members of the committee have verified their signing addresses. The Safe\u2019s address is 0x08637515E85A4633E23dfc7861e2A9f53af640f7 and visible at this link.\nEDIT Oct 26, 2023\nA revised version of this proposal has been put together below based on feedback and is proposed to go to Snapshot on Thu Oct 26th. ...",
+    "source": "",
+    "timestamp": 1696953984,
+    "utc_time": "2023-10-10 16:06:24 UTC"
+  },
+  {
+    "title": "[Hasu's GOOSE Submission] Proposed goals for Lido DAO to consider",
+    "link": "https://research.lido.fi/t/hasus-goose-submission-proposed-goals-for-lido-dao-to-consider/5590",
+    "snippet": "Intro\nThis post is a response to the The Guided Open Objective Setting Exercise (\u201cGOOSE\u201d). As a strategic advisor to the DAO, I see it as my responsibility to support the new process getting off the ground. For my submission, I have surveyed stakeholders across the Lido ecosystem (stakers, contributors, LDO holders, ecosystem, node operators, and more). ...",
+    "source": "",
+    "timestamp": 1696511698,
+    "utc_time": "2023-10-05 13:14:58 UTC"
+  },
+  {
+    "title": "The Guided Open Objective Setting Exercise (\u201cGOOSE\u201d) proposal; A genesis step to jump-start a DAO-wide goal setting exercise and cadence",
+    "link": "https://research.lido.fi/t/the-guided-open-objective-setting-exercise-goose-proposal-a-genesis-step-to-jump-start-a-dao-wide-goal-setting-exercise-and-cadence/5355",
+    "snippet": "Summary\nEstablish a prototype framework for consenting to goals, which is open, adaptable, distributed and cyclical. The output of the GOOSE is the opportunity for competitive submissions of short and medium-term goals consented to by the governance token holders; The success marker of the GOOSE will be when one-year and three-year goals aligned to the overarching DAO mission and vision are public for anyone to use.\nAbstract\nEvery system has a genesis event. ...",
+    "source": "",
+    "timestamp": 1693588181,
+    "utc_time": "2023-09-01 17:09:41 UTC"
   },
   {
     "title": "Is stETH Liquid Enough?",
@@ -224,17 +568,33 @@
     "utc_time": "2023-02-17 00:00:00 UTC"
   },
   {
+    "title": "New Easy Track motion setups with limits: RCC, PML, ATC; Gas funder; LEGO; reWARDS with limits",
+    "link": "https://research.lido.fi/t/new-easy-track-motion-setups-with-limits-rcc-pml-atc-gas-funder-lego-rewards-with-limits/3264",
+    "snippet": "To support the process of continued decentralization towards a permissionless, contributor-driven DAO, Lido DAO has to carry on significant amount of operations. In order to separate operational concerns from strategic decisions, Lido DAO leverages EasyTrack Motions. With the current addition of payment Motions with limits (LIP-19), most of ops can be performed in a safer manner, limiting the total amount of funds the given committee can request through the EasyTrack in specific timeframe. ...",
+    "source": "",
+    "timestamp": 1668794383,
+    "utc_time": "2022-11-18 17:59:43 UTC"
+  },
+  {
     "title": "Lido Testnet Launch",
     "link": "https://lidofinance.medium.com/lido-testnet-launch-d33a95b0dd5e?source=rss-139df851eff9------2",
-    "snippet": "<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/1*GX0SY8NbTjCUuSPzG3zCHw.png\" /></figure><p>Lido is a liquid Ethereum staking solution letting you earn staking rewards with no lock-ups or minimum deposits whilst contributing to the security of the Ethereum 2.0\u00a0chain.</p><p>We\u2019re thrilled to announce the launch of the Lido protocol testnet, which allows users to stake and convert testnet ETH to staked ETH(stETH). With this also comes the test launch of the Lido DAO governance tools for the Ethereum staking\u00a0service.</p><h3>Testnet Objectives</h3><p>The testnet launch sees the deployment of contracts\u200a\u2014\u200aon Goerli testnet\u200a\u2014\u200ato test Lido in dynamic conditions and gain operational experience for participants. An added bonus is that the testnet will demonstrate the simplicity of staking Ethereum with\u00a0Lido.</p><p>Objectives with respect to Lido over the coming weeks are\u00a0to:</p><ul><li>Perform distributed key generation ceremony for withdrawal credentials, which will hold all Lido\u2019s staked\u00a0ether;</li><li>Deploy the Lido DAO, distribute governance tokens, and set up all necessary parameters via DAO members voting procedures;</li><li>Assign and launch oracles, which are responsible for reporting cumulative Lido balances on the Ethereum 2.0 beacon chain to the smart contract;</li><li>Assign node operators to whom staking on the Ethereum 2.0 beacon chain will be delegated; and</li><li>Start accepting ether deposits in Goerli and check Lido\u2019s operations.</li></ul><p>In addition to showcasing what has been developed, this testnet launch is an opportunity for Ethereum validators to demonstrate their expertise. Lido stakes through a set of proven validators and, in order to guarantee performance, the validators are best-in-industry.</p><h3>Testnet Roadmap</h3><p>The roadmap for the coming week is as\u00a0follows:</p><h3>Wednesday | Nov\u00a025</h3><ul><li>The first Lido signature generation ceremony is conducted.</li><li>The final testnet version of the protocol is deployed.</li><li>The <a href=\"https://docs.google.com/document/d/1S0cLkS8r3YihZ3vTBsHYFqyIkOT-y-SKhxRIFAsb87E/edit?usp=sharing\">DAO Token Holder Manual</a> is published.</li><li>DAO holders vote for initial protocol parameters and for the inclusion of Node Operators and\u00a0Oracles.</li></ul><p>At this point, the protocol is ready to accept user funds. There will be a quick run for working validators to earn revenue as early as possible, given the clog in Pyrmont validator entry\u00a0queue.</p><ul><li>A Node Operator with 10 signing keys will be added and accepted by the DAO with the testnets orchestrators (combined, testnet orchestrators votes will reach the quorum to ensure the test run will run to completion).</li><li>The testnet orchestrators will perform DAO voting for setting the withdrawal credentials chosen during the ceremony.</li><li>Testnet orchestrators will submit 320 ETH and use the protocol to deposit them using the keys submitted in the first\u00a0step.</li><li>One node operator is needed to assist with running that first validator node\u200a\u2014\u200aplease let us know if you\u2019re willing to\u00a0help.</li></ul><h3>Thursday | Nov\u00a026</h3><ul><li>The second, text-based, signature generation ceremony is started. This ceremony will last until Tuesday, Dec 1. It won\u2019t be used in the testnet, just generated.</li><li>Node Operator and Oracle manuals are published.</li><li>Oracle Committee Members deploy oracle daemons (at least 5 Oracle Committee Members).</li><li>Node Operators generate and submit signing keys (100 keys each, at least 6 operators).</li><li>Node Operators deploy validator clients for the submitted keys.</li></ul><h3>Friday | Nov\u00a027</h3><ul><li>DAO token holders vote for accepting the signing keys submitted by Node Operators.</li><li>DAO token holders initiate depositing the received and buffered user funds to the Beacon\u00a0chain.</li></ul><h3>Saturday | Nov\u00a028</h3><ul><li>Monitoring the system working as intended and performing more deposits.</li></ul><h3>Monday | Nov\u00a030</h3><ul><li>Testing integration with Uniswap\u00a0v1.</li></ul><p>If you have question, please send message @lidofi on\u00a0telegram</p><img alt=\"\" height=\"1\" src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=d33a95b0dd5e\" width=\"1\" />",
+    "snippet": "Lido is a liquid Ethereum staking solution letting you earn staking rewards with no lock-ups or minimum deposits whilst contributing to the security of the Ethereum 2.0\u00a0chain.We\u2019re thrilled to announce the launch of the Lido protocol testnet, which allows users to stake and convert testnet ETH to staked ETH(stETH). With this also comes the test launch of the Lido DAO governance tools for the Ethereum staking\u00a0service. ...",
     "source": "Stories by Lido Finance on Medium",
     "timestamp": 1606524075,
     "utc_time": "2020-11-28 00:41:15 UTC"
   },
   {
+    "title": "Welcome to Lido DAO",
+    "link": "https://research.lido.fi/t/welcome-to-lido-dao/7",
+    "snippet": "The governance platform for the Lido DAO.\nLido DAO is a community that builds liquid staking service for Ethereum. Lido allows users to earn staking rewards without locking assets or maintaining staking infrastructure, using a selection of carefully vetted validators.\nLido FAQ\n1. What is Lido\nLido is a liquid staking solution for ETH 2.0 backed by industry-leading staking providers. ...",
+    "source": "",
+    "timestamp": 1605811843,
+    "utc_time": "2020-11-19 18:50:43 UTC"
+  },
+  {
     "title": "Introducing Lido",
     "link": "https://lidofinance.medium.com/introducing-lido-8aee079cae8e?source=rss-139df851eff9------2",
-    "snippet": "<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/700/1*dYaMl99kR7dJ3UiBfUOfGQ.png\" /></figure><p>In the next few weeks, Ethereum is expected to launch ETH 2.0 and begin the transition to proof of stake (PoS) as discussed in the original Ethereum whitepaper.</p><p>PoS networks are not new. Although Tezos and Cosmos are amongst the 100s of networks that are secured by PoS today, when Ethereum\u2019s transition is complete, it will be the largest PoS network by a significant margin.</p><p>Ethereum\u2019s PoS launch raises some additional interesting issues:</p><ol><li>Early stakers will lock their ETH until transactions are enabled on ETH 2.0, which could be a few months or several\u00a0years.</li><li>ETH cannot be moved/traded or used as collateral when a user is staking ETH\u200a\u2014\u200ain other words, staked ETH is illiquid.</li><li>Users can only stake multiples of 32\u00a0ETH.</li></ol><p><strong>Early staking commitment</strong></p><p>When ETH 2.0 launches it will be a multi-phase rollout. Staking will launch quite early (in fact, the deposit contract is already live), but the state transitions\u200a\u2014\u200aincluding transfers\u200a\u2014\u200awill not be launched until Phase 2 of the ETH 2.0 transition. Without transactions enabled, it will be impossible to move, trade or spend ETH that has been\u00a0staked.</p><p>Practically, this means that any ETH staked on ETH 2.0 early in the rollout will be locked and unmoveable for a period of time\u200a\u2014\u200apossibly even up to 2 or 3\u00a0years.</p><p>This may deter participation in staking on ETH 2.0 given that users sacrifice the ability to use, sell, trade or do anything else with their ETH for that period of\u00a0time.</p><p><strong>Illiquidity</strong></p><p>During the period mentioned above, staked ETH will be non-transferable and illiquid.</p><p>Even after transactions are enabled on ETH 2.0 and it becomes possible to unstake ETH, ETH that is staked will remain illiquid for the period of time it is\u00a0staked.</p><p>This presents an interesting dilemma\u200a\u2014\u200aadversarial incentives between securing the network through staking and participating in DeFi are introduced. Users will have to choose between the rewards offered from staking or the yield offered from DeFi protocols.</p><p>This has been best described by Tarun from Gauntlet in his research on <a href=\"https://assets.pubpub.org/uegr5e8g/61581338612941.pdf\">competitive equilibria between staking and on-chain lending</a> and Haseeb from Dragonfly in <a href=\"https://medium.com/dragonfly-research/how-defi-cannibalizes-pos-security-84b146f00697\">his commentary on the\u00a0paper</a>.</p><p><strong>Staking 32 ETH multiples</strong></p><p>Finally, some users may face an additional issue with the requirement to stake multiples of 32\u00a0ETH.</p><p>At the time of this post, a user would need to stake no less than $11,744.32 in order to participate in securing the Ethereum network under ETH\u00a02.0.</p><p>People that own 5 ETH and want to participate in staking will not be able to do so alone. Equally, people who own 45 ETH will only be able to stake 32 ETH from their\u00a0holding.</p><h3>So\u2026 why\u00a0Lido?</h3><figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*ssjiQwdiwKFDebs4\" /></figure><p>Lido is a staking solution for ETH 2.0 built to solve these problems and backed by several industry-leading staking providers. It makes staked ETH liquid and allows participation with any amount of\u00a0ETH.</p><p>When using Lido to stake your ETH on the Ethereum beacon chain, users will receive a token (bETH), which represents their ETH on the Ethereum beacon chain on a 1:1 basis. It effectively acts as a bridge bringing ETH 2.0\u2019s staking rewards to ETH\u00a01.0.</p><p>As a user\u2019s staked ETH generates staking rewards from ETH 2.0, the user\u2019s ETH balance on the beacon chain will increase. bETH balances will update correspondingly once per day allowing you to access on ETH 1.0 the value of your staking rewards received on ETH\u00a02.0.</p><p>Users can use bETH in all of the same ways that they can use ETH: sell it, spend it and, since it is compatible to be used in DeFi, use it as collateral for on-chain lending. When transactions are enabled on ETH 2.0, users can also redeem bETH for\u00a0ETH.</p><p>We believe that bETH will be an important base primitive in DeFi, and a foundational building block for the Ethereum money-lego stack.</p><figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*Wf6HuUNyweqijxC0\" /></figure><p>Lido is intended to remove the adversarial incentives of ETH 2.0 by allowing users to stake their ETH while simultaneously participating in on-chain lending with bETH, thus providing them access to additional yield from other protocols and producing a more secure ETH\u00a0network.</p><h3>What happens\u00a0next?</h3><p>It sounds simple, but there is additional nuance. Over the next few weeks p2p.org CTO will share further blog posts about Lido\u2019s architecture and provide clarity for launch timelines; the code will become open sourced; and the testnet product will become accessible.</p><p>Meanwhile, if you\u2019d like to help build Lido, you can telegram <a href=\"https://t.me/lidofi\">@lidofi</a> and we\u2019ll be in\u00a0touch.</p><p>Presale &amp; Airdrop form\u00a0: <a href=\"https://forms.gle/usf622C3BXZpxyGd9\">https://forms.gle/usf622C3BXZpxyGd9</a><br />Announcement Channel\u00a0: <a href=\"https://t.me/LidoFinanceOfficial\">https://t.me/LidoFinanceOfficial</a></p><p>Until next\u00a0time.</p><p>Lido Finance\u00a0Team</p><img alt=\"\" height=\"1\" src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=8aee079cae8e\" width=\"1\" />",
+    "snippet": "In the next few weeks, Ethereum is expected to launch ETH 2.0 and begin the transition to proof of stake (PoS) as discussed in the original Ethereum whitepaper.PoS networks are not new. Although Tezos and Cosmos are amongst the 100s of networks that are secured by PoS today, when Ethereum\u2019s transition is complete, it will be the largest PoS network by a significant margin. ...",
     "source": "Stories by Lido Finance on Medium",
     "timestamp": 1602776290,
     "utc_time": "2020-10-15 15:38:10 UTC"

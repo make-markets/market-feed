@@ -1,4 +1,6 @@
+import html
 import os
+import re
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from itertools import combinations
@@ -17,6 +19,31 @@ logger = get_logger()
 
 # Load environment variables from .env file
 load_dotenv()
+
+
+def truncate_snippet(snippet, max_length=500):
+    """Truncate the snippet to a maximum length while preserving readability."""
+    # Decode HTML entities
+    decoded_snippet = html.unescape(snippet)
+
+    # Remove HTML tags
+    text_only = re.sub(r"<[^>]+>", "", decoded_snippet)
+
+    if len(text_only) <= max_length:
+        return text_only
+
+    # Truncate the text
+    truncated = text_only[:max_length]
+
+    # Find the last complete sentence
+    last_sentence = truncated.rfind(".")
+    if last_sentence > 0:
+        truncated = truncated[: last_sentence + 1]
+
+    # Add ellipsis to indicate truncation
+    truncated += " ..."
+
+    return truncated
 
 
 def fetch_news(query: str, start_date: datetime, end_date: datetime) -> List[Dict]:
@@ -62,7 +89,7 @@ def fetch_news(query: str, start_date: datetime, end_date: datetime) -> List[Dic
                 {
                     "title": result.get("title"),
                     "link": result.get("link"),
-                    "snippet": result.get("snippet"),
+                    "snippet": truncate_snippet(result.get("snippet")),
                     "source": result.get("source"),
                     "timestamp": timestamp,
                     "utc_time": utc_time.strftime("%Y-%m-%d %H:%M:%S UTC"),
@@ -185,6 +212,8 @@ def fetch_and_update_news(token: Dict, config: Dict):
     # Remove relevance metric from the final JSON
     for article in filtered_articles:
         article.pop("relevance", None)
+        # Truncate the snippet
+        article["snippet"] = truncate_snippet(article.get("snippet", ""))
 
     # Sort articles by timestamp in descending order
     filtered_articles.sort(key=lambda x: x["timestamp"], reverse=True)

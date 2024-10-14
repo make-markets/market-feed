@@ -6,6 +6,7 @@ default_rss_feeds:
   - https://www.coindesk.com/arc/outboundfeeds/rss/
   - https://decrypt.co/feed
   - https://www.dlnews.com/arc/outboundfeeds/rss/
+  - https://blockworks.co/feed
 tokens:
   - name: Liquid staked Ether 2.0
     symbol: stETH
@@ -23,3 +24,5 @@ tokens:
     rss_feeds:
       - https://blog.lido.fi/rss/
       - https://medium.com/feed/@lidofinance
+      - https://research.lido.fi/latest.rss
+      - https://research.lido.fi/hot.rss
