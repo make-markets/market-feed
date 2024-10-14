@@ -33,6 +33,4 @@ dist/
 
 .env
 
-config.yaml
-
 token_news/

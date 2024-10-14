@@ -1,6 +1,7 @@
 import os
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+from itertools import combinations
 from typing import Dict, List
 
 from dotenv import load_dotenv
@@ -95,6 +96,28 @@ def get_output_file(token: Dict, output_dir: str) -> str:
     return os.path.join(output_dir, filename)
 
 
+def generate_queries(token: Dict) -> List[str]:
+    """Generate a list of search queries for a given token."""
+    base_query = f"{token['name']} {token['symbol']}"
+
+    # Add mandatory phrases to the base query
+    mandatory_phrases = token.get("mandatory_phrases", [])
+    if mandatory_phrases:
+        base_query += f" {' '.join(mandatory_phrases)}"
+
+    queries = [base_query]
+
+    additional_phrases = token.get("additional_phrases", [])
+    if additional_phrases:
+        # Generate combinations of additional phrases
+        for r in range(1, len(additional_phrases) + 1):
+            for combo in combinations(additional_phrases, r):
+                query = f"{base_query} {' '.join(combo)}"
+                queries.append(query)
+
+    return queries
+
+
 def fetch_and_update_news(token: Dict, config: Dict):
     logger.info(f"Fetching and updating news for {token['name']} ({token['symbol']})")
     output_dir = config.get("output_dir", "token_news")
@@ -112,13 +135,15 @@ def fetch_and_update_news(token: Dict, config: Dict):
 
     end_date = datetime.now(timezone.utc)
 
-    query = f"{token['name']} {token['symbol']}"
-    if additional_phrases := token.get("additional_phrases", []):
-        query += " " + " ".join(additional_phrases)
+    queries = generate_queries(token)
+    all_new_articles = []
 
-    new_articles = fetch_news(query, start_date, end_date)
+    for query in queries:
+        logger.info(f"Fetching news for query: {query}")
+        new_articles = fetch_news(query, start_date, end_date)
+        all_new_articles.extend(new_articles)
 
-    updated_articles = remove_redundant_articles(existing_news, new_articles)
+    updated_articles = remove_redundant_articles(existing_news, all_new_articles)
 
     save_to_json(updated_articles, output_file)
 

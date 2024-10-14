@@ -87,7 +87,8 @@ def create_token_config(coin_info: Dict[str, Any]) -> Dict[str, Any]:
         "name": coin_info["name"],
         "symbol": coin_info["symbol"],
         "address": {coin_info["network"]: coin_info["address"]},
-        "additional_phrases": ["defi", "web3", "crypto"],
+        "mandatory_phrases": [],
+        "additional_phrases": ["defi"],
         "lookback_years": LOOKBACK_YEARS,
     }
 
