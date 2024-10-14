@@ -1,8 +1,9 @@
-from typing import Optional, Tuple, Union
+from typing import List, Optional, Tuple
 
-from chainlist_utils import get_chain_id, get_rpc_urls
 from web3 import Web3
 from web3.exceptions import ContractLogicError
+
+from .chainlist_utils import get_rpc_urls
 
 # ABI for ERC20 token interface (minimal for name and symbol)
 ERC20_ABI = [
@@ -23,78 +24,94 @@ ERC20_ABI = [
 ]
 
 
-def get_web3_instance(network: Union[str, int]) -> Web3:
+def get_web3_instance(rpc_url: str) -> Optional[Web3]:
     """
-    Create a Web3 instance for the given network using chainlist_utils.
+    Create a Web3 instance for the given RPC URL.
 
     Args:
-        network (Union[str, int]): The network name or chain ID
+        rpc_url (str): The RPC URL
+
+    Returns:
+        Optional[Web3]: A connected Web3 instance or None if connection fails
+    """
+    try:
+        web3 = Web3(Web3.HTTPProvider(rpc_url))
+        if web3.is_connected():
+            return web3
+    except Exception:
+        pass
+    return None
+
+
+def get_working_web3_instance(chain_id: int) -> Web3:
+    """
+    Try to get a working Web3 instance for the given chain ID.
+
+    Args:
+        chain_id (int): The chain ID
 
     Returns:
         Web3: A connected Web3 instance
 
     Raises:
-        ValueError: If no RPC URLs are found or connection fails
+        ValueError: If no working RPC is found for the chain ID
     """
-    if isinstance(network, str):
-        chain_id = get_chain_id(network)
-        if chain_id is None:
-            raise ValueError(f"No chain ID found for network name: {network}")
-    else:
-        chain_id = int(network)
-
     rpc_urls = get_rpc_urls(chain_id)
     if not rpc_urls:
         raise ValueError(f"No RPC URLs found for chain ID: {chain_id}")
 
-    # Try RPC URLs until a working one is found
     for rpc_url in rpc_urls:
-        try:
-            web3 = Web3(Web3.HTTPProvider(rpc_url))
-            if web3.is_connected():
-                return web3
-        except Exception:
-            continue
+        web3 = get_web3_instance(rpc_url)
+        if web3:
+            return web3
 
     raise ValueError(f"Failed to connect to any RPC for chain ID: {chain_id}")
 
 
-def fetch_token_info(
-    address: str, network: Union[str, int]
-) -> Optional[Tuple[str, str]]:
+def fetch_token_info(address: str, chain_id: int) -> Optional[Tuple[str, str]]:
     """
-    Fetch the name and symbol of a token given its address and network.
+    Fetch the name and symbol of a token given its address and chain ID.
 
     Args:
         address (str): The token contract address
-        network (Union[str, int]): The network name or chain ID
+        chain_id (int): The chain ID
 
     Returns:
         Optional[Tuple[str, str]]: A tuple containing (name, symbol) if successful, None otherwise
     """
-    try:
-        web3 = get_web3_instance(network)
+    rpc_urls = get_rpc_urls(chain_id)
+    if not rpc_urls:
+        print(f"No RPC URLs found for chain ID: {chain_id}")
+        return None
 
-        # Ensure the address is valid
-        if not web3.is_address(address):
-            print(f"Invalid address: {address}")
-            return None
+    for rpc_url in rpc_urls:
+        try:
+            web3 = get_web3_instance(rpc_url)
+            if not web3:
+                continue
 
-        # Create contract instance
-        contract = web3.eth.contract(
-            address=Web3.to_checksum_address(address), abi=ERC20_ABI
-        )
+            if not web3.is_address(address):
+                print(f"Invalid address: {address}")
+                return None
 
-        # Fetch name and symbol
-        name = contract.functions.name().call()
-        symbol = contract.functions.symbol().call()
+            contract = web3.eth.contract(
+                address=Web3.to_checksum_address(address), abi=ERC20_ABI
+            )
 
-        return name, symbol
-    except ContractLogicError as e:
-        print(f"Contract error for address {address}: {str(e)}")
-    except Exception as e:
-        print(f"Error fetching token info for address {address}: {str(e)}")
+            name = contract.functions.name().call()
+            symbol = contract.functions.symbol().call()
 
+            return name, symbol
+        except ContractLogicError as e:
+            print(f"Contract error for address {address} on RPC {rpc_url}: {str(e)}")
+        except Exception as e:
+            print(
+                f"Error fetching token info for address {address} on RPC {rpc_url}: {str(e)}"
+            )
+
+    print(
+        f"Failed to fetch token info for address {address} on all RPCs for chain ID {chain_id}"
+    )
     return None
 
 
@@ -102,9 +119,9 @@ def fetch_token_info(
 if __name__ == "__main__":
     # Example token address (USDT on Ethereum)
     token_address = "0xdAC17F958D2ee523a2206206994597C13D831ec7"
-    network = 1  # Ethereum chain ID
+    ethereum_chain_id = 1
 
-    result = fetch_token_info(token_address, network)
+    result = fetch_token_info(token_address, ethereum_chain_id)
     if result:
         name, symbol = result
         print(f"Token Name: {name}")

@@ -1,71 +1,170 @@
-import asyncio
-from functools import reduce
-from typing import Any, Dict, List, Set
+import os
+import sys
 
-import httpx
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+import time
+from typing import Any, Dict, List
+
+import requests
 import yaml
 
+from market_feed.utils.coin_utils import fetch_token_info
 from market_feed.utils.logger import get_logger
 from market_feed.utils.schedule_utils import setup_schedules
 
-API_URL = "https://api.curve.fi/api/getPools/big"
+CURVE_TOKEN_API = "https://api.curve.fi/api/getTokens/all/"
+CURVE_PLATFORM_API = "https://api.curve.fi/api/getPlatforms/"
 CONFIG_FILE = "config.yaml"
 DEFAULT_FETCH_INTERVAL = 3600  # 1 hour in seconds
 LOOKBACK_YEARS = 2
+NATIVE_TOKEN_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 
 logger = get_logger()
 
 
-async def fetch_pools() -> List[Dict[str, Any]]:
-    async with httpx.AsyncClient() as client:
-        response = await client.get(API_URL)
-        response.raise_for_status()
-        return response.json()["data"]["poolData"]
+def get_networks() -> Dict[str, int]:
+    logger.info("Fetching network information from Curve API")
+    response = requests.get(CURVE_PLATFORM_API)
+    response.raise_for_status()
+    networks = response.json()["data"]["platformToChainIdMap"]
+    logger.info(f"Successfully fetched information for {len(networks)} networks")
+    return networks
 
 
-def extract_coins(pools: List[Dict[str, Any]]) -> Set[str]:
-    coin_addresses = set()
-    for pool in pools:
-        breakpoint()
-        network = pool["blockchainId"]
-        for coin_address in pool["coinsAddresses"]:
-            coin_addresses.add((network, coin_address))
-    return coin_addresses
-
-
-def create_token_config(coin_info: tuple) -> Dict[str, Any]:
-    network, address = coin_info
-    return {
-        "symbol": address,
-        "address": {network: address},
-        "additional_phrases": ["stablecoin"],
-        "lookback_years": LOOKBACK_YEARS,
-    }
-
-
-def create_config(coins: Set[tuple]) -> Dict[str, Any]:
-    return {
-        "tokens": [create_token_config(coin) for coin in coins],
+def load_existing_config() -> Dict[str, Any]:
+    default_config = {
+        "tokens": [],
         "output_directory": "token_news",
         "default_fetch_interval": DEFAULT_FETCH_INTERVAL,
     }
 
+    if os.path.exists(CONFIG_FILE):
+        try:
+            with open(CONFIG_FILE, "r") as f:
+                config = yaml.safe_load(f)
 
-async def update_config():
+            if not isinstance(config, dict):
+                logger.warning(
+                    "Existing config file is not properly formatted. Using default configuration."
+                )
+                return default_config
+
+            # Ensure all required keys are present
+            for key in default_config.keys():
+                if key not in config:
+                    logger.warning(
+                        f"Missing '{key}' in config file. Adding default value."
+                    )
+                    config[key] = default_config[key]
+
+            # Ensure 'tokens' is a list
+            if not isinstance(config["tokens"], list):
+                logger.warning(
+                    "'tokens' in config file is not a list. Resetting to empty list."
+                )
+                config["tokens"] = []
+
+            return config
+        except yaml.YAMLError as e:
+            logger.error(
+                f"Error parsing existing config file: {str(e)}. Using default configuration."
+            )
+            return default_config
+    else:
+        logger.info("Config file not found. Creating new configuration.")
+        return default_config
+
+
+def save_config(config: Dict[str, Any]):
+    with open(CONFIG_FILE, "w") as f:
+        yaml.dump(config, f, default_flow_style=False)
+    logger.info("Config file updated successfully")
+
+
+def create_token_config(coin_info: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        "name": coin_info["name"],
+        "symbol": coin_info["symbol"],
+        "address": {coin_info["network"]: coin_info["address"]},
+        "additional_phrases": ["defi", "web3", "crypto"],
+        "lookback_years": LOOKBACK_YEARS,
+    }
+
+
+def token_exists(token: Dict[str, Any], existing_tokens: List[Dict[str, Any]]) -> bool:
+    for existing_token in existing_tokens:
+        if (
+            token["symbol"] == existing_token["symbol"]
+            and token["address"] == existing_token["address"]
+        ):
+            return True
+    return False
+
+
+def fetch_and_update_coins(networks: Dict[str, int], config: Dict[str, Any]) -> int:
+    new_tokens_count = 0
+    total_networks = len(networks)
+    for index, (network, chain_id) in enumerate(networks.items(), 1):
+        logger.info(
+            f"Fetching tokens for network: {network} (Chain ID: {chain_id}) - {index}/{total_networks}"
+        )
+        response = requests.get(CURVE_TOKEN_API + network)
+        response.raise_for_status()
+        tokens = response.json()["data"]["tokens"]
+        logger.info(f"Found {len(tokens)} tokens on {network}")
+
+        for token in tokens:
+            if token["address"].lower() == NATIVE_TOKEN_ADDRESS.lower():
+                logger.info(f"Skipping native token on {network}")
+                continue
+
+            token["network"] = network
+            token["chain_id"] = chain_id
+            if not token_exists(token, config["tokens"]):
+                logger.debug(
+                    f"Fetching additional info for new token: {token['address']} on {network}"
+                )
+                token_info = fetch_token_info(token["address"], chain_id)
+                if token_info:
+                    token["name"], token["symbol"] = token_info
+                    new_token_config = create_token_config(token)
+                    config["tokens"].append(new_token_config)
+                    new_tokens_count += 1
+                    logger.info(
+                        f"Added new token: {token['name']} ({token['symbol']}) on {network}"
+                    )
+                    save_config(config)
+                else:
+                    logger.warning(
+                        f"Failed to fetch info for token {token['address']} on chain {chain_id}"
+                    )
+
+    return new_tokens_count
+
+
+def update_config():
+    start_time = time.time()
+    logger.info("Starting config update process")
     try:
-        pools = await fetch_pools()
-        coins = extract_coins(pools)
-        config = create_config(coins)
+        config = load_existing_config()
+        networks = get_networks()
+        new_tokens_count = fetch_and_update_coins(networks, config)
 
-        with open(CONFIG_FILE, "w") as f:
-            yaml.dump(config, f, default_flow_style=False)
-        logger.info("Config file updated successfully")
+        end_time = time.time()
+        duration = end_time - start_time
+        logger.info(f"Config update process completed in {duration:.2f} seconds")
+        logger.info(
+            f"Added {new_tokens_count} new tokens. Total tokens: {len(config['tokens'])}"
+        )
     except Exception as e:
-        logger.error(f"Error updating config: {str(e)}")
+        logger.error(f"Error updating config: {str(e)}", exc_info=True)
 
 
 def run_update_config():
-    asyncio.run(update_config())
+    logger.info("Running config update")
+    update_config()
+    logger.info("Config update completed")
 
 
 if __name__ == "__main__":
@@ -93,8 +192,6 @@ if __name__ == "__main__":
     )
 
     # Start the scheduler
-    import time
-
     import schedule
 
     while True:
