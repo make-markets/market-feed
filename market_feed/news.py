@@ -162,7 +162,8 @@ def fetch_and_update_news(token: Dict, config: Dict):
     rss_articles = fetch_rss_feeds(token, config)
     all_new_articles.extend(rss_articles)
 
-    updated_articles = remove_redundant_articles(existing_news, all_new_articles)
+    # Use the new remove_duplicates function here
+    updated_articles = remove_duplicates(existing_news + all_new_articles)
 
     # Analyze article relevance for non-RSS articles
     keywords = [token["name"], token["symbol"]] + token.get("mandatory_phrases", [])
@@ -185,6 +186,9 @@ def fetch_and_update_news(token: Dict, config: Dict):
     for article in filtered_articles:
         article.pop("relevance", None)
 
+    # Sort articles by timestamp in descending order
+    filtered_articles.sort(key=lambda x: x["timestamp"], reverse=True)
+
     save_to_json(filtered_articles, output_file)
 
     new_articles_count = len(filtered_articles) - len(existing_news)
@@ -195,3 +199,16 @@ def fetch_and_update_news(token: Dict, config: Dict):
     # Log headlines of new articles
     for article in filtered_articles[:new_articles_count]:
         logger.info(f"New article for {token['name']}: {article['title']}")
+
+
+def remove_duplicates(news_items: List[Dict]) -> List[Dict]:
+    seen_titles = set()
+    unique_items = []
+
+    for item in news_items:
+        title = item["title"]
+        if title not in seen_titles:
+            seen_titles.add(title)
+            unique_items.append(item)
+
+    return unique_items
