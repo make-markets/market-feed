@@ -5,8 +5,8 @@ from typing import Dict
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from market_feed.config import load_config
-from market_feed.news import fetch_and_update_news
+from market_feed.feeds import get_content
+from market_feed.utils.config_utils import load_config
 from market_feed.utils.logger import get_logger
 from market_feed.utils.schedule_utils import setup_schedules
 
@@ -14,7 +14,7 @@ logger = get_logger()
 
 
 def create_job(token: Dict, config: Dict):
-    return lambda: fetch_and_update_news(token, config)
+    return lambda: get_content(token, config)
 
 
 def main():
