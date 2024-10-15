@@ -93,6 +93,7 @@ def fetch_news(query: str, start_date: datetime, end_date: datetime) -> List[Dic
                     "source": result.get("source"),
                     "timestamp": timestamp,
                     "utc_time": utc_time.strftime("%Y-%m-%d %H:%M:%S UTC"),
+                    "tag": "independent-news",  # Add this line
                 }
             )
 
@@ -192,7 +193,7 @@ def fetch_and_update_news(token: Dict, config: Dict):
     # Use the new remove_duplicates function here
     updated_articles = remove_duplicates(existing_news + all_new_articles)
 
-    # Analyze article relevance for non-RSS articles
+    # Analyze article relevance for articles without pre-set relevance
     keywords = [token["name"], token["symbol"]] + token.get("mandatory_phrases", [])
     additional_phrases = token.get("additional_phrases", [])
     analyzed_articles = [

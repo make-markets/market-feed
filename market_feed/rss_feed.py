@@ -8,7 +8,7 @@ from market_feed.utils.logger import get_logger
 logger = get_logger()
 
 
-def fetch_rss_feed(feed_url: str, is_token_specific: bool) -> List[Dict]:
+def fetch_rss_feed(feed_url: str, tag: str, is_default: bool) -> List[Dict]:
     """Fetch articles from an RSS feed."""
     logger.info(f"Fetching RSS feed: {feed_url}")
     feed = feedparser.parse(feed_url)
@@ -30,9 +30,10 @@ def fetch_rss_feed(feed_url: str, is_token_specific: bool) -> List[Dict]:
             "source": feed.feed.get("title", "Unknown"),
             "timestamp": int(timestamp),
             "utc_time": utc_time.strftime("%Y-%m-%d %H:%M:%S UTC"),
+            "tag": tag,
         }
 
-        if is_token_specific:
+        if not is_default:
             article["relevance"] = 10.0
 
         articles.append(article)
@@ -49,12 +50,12 @@ def fetch_rss_feeds(token: Dict, config: Dict) -> List[Dict]:
 
     # Fetch articles from default RSS feeds
     for feed_url in default_rss_feeds:
-        articles = fetch_rss_feed(feed_url, is_token_specific=False)
+        articles = fetch_rss_feed(feed_url, tag="independent-news", is_default=True)
         all_articles.extend(articles)
 
     # Fetch articles from token-specific RSS feeds
-    for feed_url in token_rss_feeds:
-        articles = fetch_rss_feed(feed_url, is_token_specific=True)
+    for feed in token_rss_feeds:
+        articles = fetch_rss_feed(feed["url"], tag=feed["tag"], is_default=False)
         all_articles.extend(articles)
 
     return all_articles

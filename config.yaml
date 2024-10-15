@@ -22,7 +22,11 @@ tokens:
       - p2p.org
       - lido.fi
     rss_feeds:
-      - https://blog.lido.fi/rss/
-      - https://medium.com/feed/@lidofinance
-      - https://research.lido.fi/latest.rss
-      - https://research.lido.fi/hot.rss
+      - tag: asset-issuer
+        url: https://blog.lido.fi/rss/
+      - tag: asset-issuer
+        url: https://medium.com/feed/@lidofinance
+      - tag: dao-governance
+        url: https://research.lido.fi/latest.rss
+      - tag: dao-governance
+        url: https://research.lido.fi/hot.rss
